@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture-Aware Quantization | Medical QA System</title>
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="ui/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-text">
+        <h1>Architecture-Aware Quantization</h1>
+        <p>Offline Medical Question-Answering System &bull; OpenVINO 2026.4.1 &bull; NNCF 3.4.0</p>
+      </div>
+    </div>
+    
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="tab-overview">📊 Executive Overview</button>
+      <button class="nav-tab" data-tab="tab-matrix">📋 Benchmark Matrix</button>
+      <button class="nav-tab" data-tab="tab-prompts">🩺 Clinical QA Inspector</button>
+      <button class="nav-tab" data-tab="tab-architecture">🔬 Architectural Insights</button>
+      <button class="nav-tab" data-tab="tab-hardware">💻 Hardware & Environment</button>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="btn-present" id="btn-enter-presentation">
+        <span>📽️</span>
+        <span>Presentation Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main>
+
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <section id="tab-overview" class="tab-content active">
+      <div class="hero">
+        <div class="hero-tag">✨ Empirical Research Synthesis</div>
+        <h2>Offline Medical QA Optimization on <span class="gradient-text">Qwen2.5-0.5B-Instruct</span></h2>
+        <p class="lead">
+          Comprehensive post-training quantization study comparing 17 configurations across uniform INT8, group-size sweeps ($g \in \{32, 64, 128, 256\}$), mixed-precision ratio sweeps, and data-aware AWQ / Scale Estimation on AMD Zen 4 AVX-512 hardware.
+        </p>
+        <div class="hero-badges">
+          <span class="badge-item">Base Model: <strong>Qwen/Qwen2.5-0.5B-Instruct</strong></span>
+          <span class="badge-item">Parameters: <strong>494,032,768 (~494M)</strong></span>
+          <span class="badge-item">Target Processor: <strong>AMD Ryzen 7 8845HS (16 Threads, AVX-512)</strong></span>
+          <span class="badge-item">Discrete GPU: <strong>NVIDIA RTX 4060 Laptop (8GB)</strong></span>
+          <span class="badge-item">Quantization Engine: <strong>Intel OpenVINO 2026.4.1 + NNCF 3.4.0</strong></span>
+        </div>
+      </div>
+
+      <!-- KPI Metric Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card cyan">
+          <div class="kpi-icon">🚀</div>
+          <div class="kpi-title">Pareto Champion Speed</div>
+          <div class="kpi-value text-cyan">47.10 tok/s</div>
+          <div class="kpi-meta"><span class="highlight">+132% speedup</span> vs FP32 Baseline (20.29 tok/s)</div>
+        </div>
+
+        <div class="kpi-card emerald">
+          <div class="kpi-icon">💾</div>
+          <div class="kpi-title">Model Size Reduction</div>
+          <div class="kpi-value text-emerald">308.51 MB</div>
+          <div class="kpi-meta"><span class="highlight">3.06x Compression</span> vs FP32 (944.08 MB)</div>
+        </div>
+
+        <div class="kpi-card purple">
+          <div class="kpi-icon">⏱️</div>
+          <div class="kpi-title">Average Prompt Latency</div>
+          <div class="kpi-value text-purple">2.73s</div>
+          <div class="kpi-meta">Vs. 6.33s for FP32 across 128 generated tokens</div>
+        </div>
+
+        <div class="kpi-card amber">
+          <div class="kpi-icon">🩺</div>
+          <div class="kpi-title">Clinical Accuracy & Coherence</div>
+          <div class="kpi-value">100% PASS</div>
+          <div class="kpi-meta">5/5 Medical Domains validated with rep ratio &le; 0.039</div>
+        </div>
+      </div>
+
+      <!-- Interactive Charts -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <h3>Pareto Frontier: Model Size vs. Latency</h3>
+              <p>Top-left quadrant represents the optimal tradeoff</p>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="paretoChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <h3>Generation Throughput (Tokens / Sec)</h3>
+              <p>Ranked generation speed across all 17 model variants</p>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="throughputChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <h3>Group-Size Scaling Dynamics ($g \in \{32, 64, 128, 256\}$)</h3>
+              <p>Symmetric vs. Asymmetric generation speed comparison</p>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="groupSweepChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <h3>Storage & Memory Footprint Breakdown</h3>
+              <p>Weights (.bin) vs. Graph Topology (.xml) in Megabytes</p>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="footprintChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: FULL BENCHMARK MATRIX -->
+    <section id="tab-matrix" class="tab-content">
+      <div class="table-card">
+        <div class="table-controls">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="table-search" placeholder="Search variant name or category...">
+          </div>
+          <div class="filter-pills">
+            <button class="pill-btn active" data-filter="all">All (17)</button>
+            <button class="pill-btn" data-filter="Baselines">Baselines</button>
+            <button class="pill-btn" data-filter="INT8 Asymmetric">INT8</button>
+            <button class="pill-btn" data-filter="INT4 Symmetric">INT4 Symmetric</button>
+            <button class="pill-btn" data-filter="INT4 Asymmetric">INT4 Asymmetric</button>
+            <button class="pill-btn" data-filter="Mixed Precision">Mixed Precision</button>
+            <button class="pill-btn" data-filter="Data-Aware (AWQ)">AWQ</button>
+            <button class="pill-btn" data-filter="Data-Aware (Scale Est)">Scale Estimation</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th data-col="variant_id">Model Variant ↕</th>
+                <th>Category</th>
+                <th data-col="total_size_mb">Total Size ↕</th>
+                <th data-col="compression_ratio">Ratio ↕</th>
+                <th data-col="size_reduction_pct">Reduction ↕</th>
+                <th data-col="avg_latency_seconds">Avg Latency ↕</th>
+                <th data-col="avg_tokens_per_second">Throughput (tok/s) ↕</th>
+                <th data-col="avg_repetition_ratio">Repetition Ratio ↕</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="benchmark-table-body">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: CLINICAL QA INSPECTOR -->
+    <section id="tab-prompts" class="tab-content">
+      <div class="prompt-inspector-grid">
+        <div class="prompt-sidebar">
+          <h3 style="font-family:var(--font-heading); font-size:1rem; margin-bottom:0.75rem; color:#fff;">Select Medical Evaluation Prompt:</h3>
+          <div id="prompt-selector-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="prompt-comparison-view">
+          <div class="prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-box-title" id="inspector-prompt-title">val_med_01: Endocrinology</span>
+              <span class="tag-badge cyan">128 max new tokens &bull; Greedy (temp=0.0)</span>
+            </div>
+            <p id="inspector-prompt-text" style="color:#fff; font-size:0.92rem; font-style:italic; line-height:1.4;"></p>
+          </div>
+
+          <div class="comparison-cards-grid">
+            <!-- Card 1: FP32 Baseline -->
+            <div class="response-card">
+              <div class="response-card-header">
+                <div>
+                  <strong style="color:#fff; font-size:0.9rem;">FP32 Uncompressed</strong>
+                  <span class="tag-badge gray" style="margin-left:4px;">944 MB</span>
+                </div>
+                <span class="tag-badge gray" id="resp-fp32-meta">20.29 tok/s | 6.33s</span>
+              </div>
+              <div class="response-text" id="resp-fp32-text"></div>
+            </div>
+
+            <!-- Card 2: INT8 Asymmetric -->
+            <div class="response-card">
+              <div class="response-card-header">
+                <div>
+                  <strong style="color:#fff; font-size:0.9rem;">INT8 Asymmetric</strong>
+                  <span class="tag-badge emerald" style="margin-left:4px;">474 MB</span>
+                </div>
+                <span class="tag-badge emerald" id="resp-int8-meta">35.22 tok/s | 3.64s</span>
+              </div>
+              <div class="response-text" id="resp-int8-text"></div>
+            </div>
+
+            <!-- Card 3: AWQ INT4 Symmetric (Champion) -->
+            <div class="response-card champion">
+              <div class="response-card-header">
+                <div>
+                  <strong style="color:var(--cyan-light); font-size:0.9rem;">AWQ INT4-SYM (Champion)</strong>
+                  <span class="tag-badge cyan" style="margin-left:4px;">308 MB</span>
+                </div>
+                <span class="tag-badge cyan" id="resp-awq-meta">47.10 tok/s | 2.73s</span>
+              </div>
+              <div class="response-text" id="resp-awq-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: ARCHITECTURAL INSIGHTS -->
+    <section id="tab-architecture" class="tab-content">
+      <div class="arch-grid">
+        <div class="arch-card">
+          <h4>⚡ Symmetric vs. Asymmetric Vector Kernels</h4>
+          <p>On Zen 4 / AVX-512, symmetric INT4 quantization outpaced asymmetric INT4 by 4%–10% in generation throughput across every group size. Symmetric dequantization eliminates runtime zero-point subtraction, significantly lowering register pressure.</p>
+          <div class="callout-box">Throughput: 45.93 tok/s (Symmetric) vs. 44.01 tok/s (Asymmetric) at g=128</div>
+        </div>
+
+        <div class="arch-card">
+          <h4>🧩 Hidden Dimension Divisibility ($d_{\text{model}} = 896$)</h4>
+          <p>Qwen2.5-0.5B's hidden dimension (896) is evenly divisible by 32 (28), 64 (14), and 128 (7), but fails on 256 ($896 / 256 = 3.5$). Self-attention projections required fallback to $g=128$, while MLP projections ($d_{\text{ffn}} = 4864$) scaled directly to $g=256$.</p>
+          <div class="callout-box">Resolved via OpenVINO's GroupSizeFallbackMode.ADJUST</div>
+        </div>
+
+        <div class="arch-card">
+          <h4>🎯 AWQ Salient Channel Weight Protection</h4>
+          <p>Standard PTQ minimizes tensor MSE uniformly. AWQ observes activation magnitudes on the 64-sample clinical calibration corpus, protecting the top 0.5% salient channels from clipping error and achieving the highest generation throughput (47.10 tok/s).</p>
+          <div class="callout-box">Fastest throughput with 0.015 repetition ratio</div>
+        </div>
+
+        <div class="arch-card">
+          <h4>🧠 Dynamic Dequantization (WNA16) vs W4A4</h4>
+          <p>Weights are compressed to 4-bit in memory and dequantized on-the-fly to FP16 in registers. Activations remain in FP16, capturing 70% bandwidth savings while eliminating activation outlier quantization collapse.</p>
+          <div class="callout-box">3.06x memory reduction with zero clinical quality loss</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: HARDWARE & ENVIRONMENT PROFILE -->
+    <section id="tab-hardware" class="tab-content">
+      <div class="table-card">
+        <h3 style="font-family:var(--font-heading); color:#fff; margin-bottom:1rem;">Host Compute & Runtime Profile</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Subsystem / Framework</th>
+                <th>Specification</th>
+                <th>Optimization Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Processor (CPU)</strong></td>
+                <td>AMD Ryzen 7 8845HS w/ Radeon 780M (8 Cores / 16 Threads)</td>
+                <td>AVX-512, AVX2, FMA3 vector execution paths</td>
+              </tr>
+              <tr>
+                <td><strong>Discrete GPU (dGPU)</strong></td>
+                <td>NVIDIA GeForce RTX 4060 Laptop GPU (8GB GDDR6)</td>
+                <td>OpenVINO target device <code>GPU.0</code></td>
+              </tr>
+              <tr>
+                <td><strong>System Memory (RAM)</strong></td>
+                <td>16.0 GB Total Physical RAM (~15.3 GB visible)</td>
+                <td>All quantized models load in &lt;310 MB RAM</td>
+              </tr>
+              <tr>
+                <td><strong>OpenVINO Runtime</strong></td>
+                <td><code>2026.4.1-22982-e213a147257</code></td>
+                <td>High-throughput Causal LM graph execution</td>
+              </tr>
+              <tr>
+                <td><strong>Compression Engine</strong></td>
+                <td>Intel NNCF <code>3.4.0</code></td>
+                <td>Data-aware AWQ, Scale Est & Weight Compression</td>
+              </tr>
+              <tr>
+                <td><strong>Operating System</strong></td>
+                <td>Microsoft Windows 11 Home (Build 10.0.26200)</td>
+                <td>Native execution via isolated Python 3.14.5 environment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Fullscreen Slide Deck Presentation Overlay -->
+  <div id="presentation-overlay" class="presentation-overlay">
+    <div class="slide-header">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">
+          <h1 style="font-size:1.1rem; color:#fff;">Offline Medical QA Optimization</h1>
+          <p id="slide-counter" style="color:var(--cyan-light); font-weight:600;">Slide 1 of 4</p>
+        </div>
+      </div>
+      <button class="slide-btn" id="btn-close-presentation">✕ Exit (ESC)</button>
+    </div>
+
+    <div class="slide-body">
+      <div class="hero-tag" id="slide-tag">Executive Summary</div>
+      <h2 id="slide-title" style="font-family:var(--font-heading); font-size:2.8rem; font-weight:800; color:#fff; margin-bottom:1rem;"></h2>
+      <p id="slide-lead" style="font-size:1.25rem; color:var(--text-secondary); max-width:1050px; line-height:1.5;"></p>
+      <div id="slide-dynamic-content"></div>
+    </div>
+
+    <div class="slide-footer">
+      <div style="font-size:0.85rem; color:var(--text-muted);">
+        Use <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; color:#fff;">&larr;</kbd> <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; color:#fff;">&rarr;</kbd> or Space to navigate slides
+      </div>
+      <div class="slide-nav-controls">
+        <button class="slide-btn" id="slide-prev">&larr; Previous</button>
+        <button class="slide-btn" id="slide-next">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Bundle & Scripts -->
+  <script src="ui/data.js"></script>
+  <script src="ui/app.js"></script>
+</body>
+</html>

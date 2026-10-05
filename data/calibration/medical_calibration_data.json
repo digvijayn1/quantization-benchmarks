@@ -1,0 +1,450 @@
+[
+  {
+    "sample_id": "calib_001",
+    "domain": "Endocrinology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c?<|im_end|>\n<|im_start|>assistant\nDiagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing.<|im_end|>",
+    "query": "What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c?",
+    "reference_context": "Diagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing."
+  },
+  {
+    "sample_id": "calib_002",
+    "domain": "Cardiology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nExplain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension.<|im_end|>\n<|im_start|>assistant\nACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels.<|im_end|>",
+    "query": "Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension.",
+    "reference_context": "ACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels."
+  },
+  {
+    "sample_id": "calib_003",
+    "domain": "Pulmonology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)?<|im_end|>\n<|im_start|>assistant\nA post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines.<|im_end|>",
+    "query": "What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)?",
+    "reference_context": "A post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines."
+  },
+  {
+    "sample_id": "calib_004",
+    "domain": "Pharmacology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhy is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated?<|im_end|>\n<|im_start|>assistant\nCombining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation.<|im_end|>",
+    "query": "Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated?",
+    "reference_context": "Combining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation."
+  },
+  {
+    "sample_id": "calib_005",
+    "domain": "Neurology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)?<|im_end|>\n<|im_start|>assistant\nTIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours.<|im_end|>",
+    "query": "What clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)?",
+    "reference_context": "TIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours."
+  },
+  {
+    "sample_id": "calib_006",
+    "domain": "Infectious Diseases",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities?<|im_end|>\n<|im_start|>assistant\nStandard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance.<|im_end|>",
+    "query": "What are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities?",
+    "reference_context": "Standard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance."
+  },
+  {
+    "sample_id": "calib_007",
+    "domain": "Nephrology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nDefine Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines.<|im_end|>\n<|im_start|>assistant\nKDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours.<|im_end|>",
+    "query": "Define Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines.",
+    "reference_context": "KDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours."
+  },
+  {
+    "sample_id": "calib_008",
+    "domain": "Gastroenterology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the classic diagnostic endoscopic and histological findings associated with Celiac Disease?<|im_end|>\n<|im_start|>assistant\nEndoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification).<|im_end|>",
+    "query": "What are the classic diagnostic endoscopic and histological findings associated with Celiac Disease?",
+    "reference_context": "Endoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification)."
+  },
+  {
+    "sample_id": "calib_009",
+    "domain": "Hematology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nDifferentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation.<|im_end|>\n<|im_start|>assistant\nIron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation.<|im_end|>",
+    "query": "Differentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation.",
+    "reference_context": "Iron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation."
+  },
+  {
+    "sample_id": "calib_010",
+    "domain": "Emergency Medicine",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the immediate clinical management priorities for acute anaphylactic shock in an adult patient?<|im_end|>\n<|im_start|>assistant\nImmediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning.<|im_end|>",
+    "query": "What are the immediate clinical management priorities for acute anaphylactic shock in an adult patient?",
+    "reference_context": "Immediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning."
+  },
+  {
+    "sample_id": "calib_011",
+    "domain": "Rheumatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity?<|im_end|>\n<|im_start|>assistant\nAnti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis.<|im_end|>",
+    "query": "What autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity?",
+    "reference_context": "Anti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis."
+  },
+  {
+    "sample_id": "calib_012",
+    "domain": "Pediatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)?<|im_end|>\n<|im_start|>assistant\nHallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress.<|im_end|>",
+    "query": "What are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)?",
+    "reference_context": "Hallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress."
+  },
+  {
+    "sample_id": "calib_013",
+    "domain": "Oncology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nExplain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target.<|im_end|>\n<|im_start|>assistant\nThe Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib.<|im_end|>",
+    "query": "Explain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target.",
+    "reference_context": "The Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib."
+  },
+  {
+    "sample_id": "calib_014",
+    "domain": "Dermatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat clinical criteria constitute the ABCDE mnemonic used for melanoma screening?<|im_end|>\n<|im_start|>assistant\nA: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics.<|im_end|>",
+    "query": "What clinical criteria constitute the ABCDE mnemonic used for melanoma screening?",
+    "reference_context": "A: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics."
+  },
+  {
+    "sample_id": "calib_015",
+    "domain": "Psychiatry",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode?<|im_end|>\n<|im_start|>assistant\nAt least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment.<|im_end|>",
+    "query": "What are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode?",
+    "reference_context": "At least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment."
+  },
+  {
+    "sample_id": "calib_016",
+    "domain": "Toxicology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window?<|im_end|>\n<|im_start|>assistant\nN-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram.<|im_end|>",
+    "query": "What is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window?",
+    "reference_context": "N-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram."
+  },
+  {
+    "sample_id": "calib_017",
+    "domain": "Obstetrics & Gynecology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation?<|im_end|>\n<|im_start|>assistant\nPreeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances).<|im_end|>",
+    "query": "What criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation?",
+    "reference_context": "Preeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances)."
+  },
+  {
+    "sample_id": "calib_018",
+    "domain": "Geriatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients?<|im_end|>\n<|im_start|>assistant\nDelirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages.<|im_end|>",
+    "query": "What are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients?",
+    "reference_context": "Delirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages."
+  },
+  {
+    "sample_id": "calib_019",
+    "domain": "Critical Care",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions?<|im_end|>\n<|im_start|>assistant\nSeptic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation.<|im_end|>",
+    "query": "What are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions?",
+    "reference_context": "Septic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation."
+  },
+  {
+    "sample_id": "calib_020",
+    "domain": "Ophthalmology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nWhat are the immediate clinical presentations and emergency management of acute angle-closure glaucoma?<|im_end|>\n<|im_start|>assistant\nSevere eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy.<|im_end|>",
+    "query": "What are the immediate clinical presentations and emergency management of acute angle-closure glaucoma?",
+    "reference_context": "Severe eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy."
+  },
+  {
+    "sample_id": "calib_021",
+    "domain": "Endocrinology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nDiagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Diagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing."
+  },
+  {
+    "sample_id": "calib_022",
+    "domain": "Cardiology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels.<|im_end|>",
+    "query": "Summarize in clinical detail: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "ACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels."
+  },
+  {
+    "sample_id": "calib_023",
+    "domain": "Pulmonology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nA post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines.<|im_end|>",
+    "query": "Summarize in clinical detail: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "A post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines."
+  },
+  {
+    "sample_id": "calib_024",
+    "domain": "Pharmacology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nCombining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation.<|im_end|>",
+    "query": "Summarize in clinical detail: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Combining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation."
+  },
+  {
+    "sample_id": "calib_025",
+    "domain": "Neurology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nTIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours.<|im_end|>",
+    "query": "Summarize in clinical detail: What clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "TIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours."
+  },
+  {
+    "sample_id": "calib_026",
+    "domain": "Infectious Diseases",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nStandard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Standard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance."
+  },
+  {
+    "sample_id": "calib_027",
+    "domain": "Nephrology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: Define Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines. \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nKDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours.<|im_end|>",
+    "query": "Summarize in clinical detail: Define Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines. \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "KDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours."
+  },
+  {
+    "sample_id": "calib_028",
+    "domain": "Gastroenterology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the classic diagnostic endoscopic and histological findings associated with Celiac Disease? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nEndoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification).<|im_end|>",
+    "query": "Summarize in clinical detail: What are the classic diagnostic endoscopic and histological findings associated with Celiac Disease? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Endoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification)."
+  },
+  {
+    "sample_id": "calib_029",
+    "domain": "Hematology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: Differentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation. \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nIron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation.<|im_end|>",
+    "query": "Summarize in clinical detail: Differentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation. \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Iron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation."
+  },
+  {
+    "sample_id": "calib_030",
+    "domain": "Emergency Medicine",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the immediate clinical management priorities for acute anaphylactic shock in an adult patient? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nImmediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the immediate clinical management priorities for acute anaphylactic shock in an adult patient? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Immediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning."
+  },
+  {
+    "sample_id": "calib_031",
+    "domain": "Rheumatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nAnti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis.<|im_end|>",
+    "query": "Summarize in clinical detail: What autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Anti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis."
+  },
+  {
+    "sample_id": "calib_032",
+    "domain": "Pediatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nHallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Hallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress."
+  },
+  {
+    "sample_id": "calib_033",
+    "domain": "Oncology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: Explain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target. \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nThe Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib.<|im_end|>",
+    "query": "Summarize in clinical detail: Explain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target. \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "The Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib."
+  },
+  {
+    "sample_id": "calib_034",
+    "domain": "Dermatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What clinical criteria constitute the ABCDE mnemonic used for melanoma screening? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nA: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics.<|im_end|>",
+    "query": "Summarize in clinical detail: What clinical criteria constitute the ABCDE mnemonic used for melanoma screening? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "A: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics."
+  },
+  {
+    "sample_id": "calib_035",
+    "domain": "Psychiatry",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nAt least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "At least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment."
+  },
+  {
+    "sample_id": "calib_036",
+    "domain": "Toxicology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nN-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram.<|im_end|>",
+    "query": "Summarize in clinical detail: What is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "N-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram."
+  },
+  {
+    "sample_id": "calib_037",
+    "domain": "Obstetrics & Gynecology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nPreeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances).<|im_end|>",
+    "query": "Summarize in clinical detail: What criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Preeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances)."
+  },
+  {
+    "sample_id": "calib_038",
+    "domain": "Geriatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nDelirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Delirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages."
+  },
+  {
+    "sample_id": "calib_039",
+    "domain": "Critical Care",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nSeptic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Septic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation."
+  },
+  {
+    "sample_id": "calib_040",
+    "domain": "Ophthalmology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nSummarize in clinical detail: What are the immediate clinical presentations and emergency management of acute angle-closure glaucoma? \nProvide pharmacological and pathophysiological rationale.<|im_end|>\n<|im_start|>assistant\nSevere eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy.<|im_end|>",
+    "query": "Summarize in clinical detail: What are the immediate clinical presentations and emergency management of acute angle-closure glaucoma? \nProvide pharmacological and pathophysiological rationale.",
+    "reference_context": "Severe eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy."
+  },
+  {
+    "sample_id": "calib_041",
+    "domain": "Endocrinology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nDiagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing.<|im_end|>",
+    "query": "Medical Review Query: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Diagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing."
+  },
+  {
+    "sample_id": "calib_042",
+    "domain": "Cardiology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels.<|im_end|>",
+    "query": "Medical Review Query: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "ACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels."
+  },
+  {
+    "sample_id": "calib_043",
+    "domain": "Pulmonology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nA post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines.<|im_end|>",
+    "query": "Medical Review Query: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "A post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines."
+  },
+  {
+    "sample_id": "calib_044",
+    "domain": "Pharmacology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nCombining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation.<|im_end|>",
+    "query": "Medical Review Query: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Combining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation."
+  },
+  {
+    "sample_id": "calib_045",
+    "domain": "Neurology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nTIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours.<|im_end|>",
+    "query": "Medical Review Query: What clinical features distinguish an acute ischemic stroke from a transient ischemic attack (TIA)? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "TIA involves transient neurological dysfunction caused by focal ischemia without acute infarction on neuroimaging, typically resolving within 1-24 hours."
+  },
+  {
+    "sample_id": "calib_046",
+    "domain": "Infectious Diseases",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nStandard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance.<|im_end|>",
+    "query": "Medical Review Query: What are the common empirical antibiotic regimens for community-acquired pneumonia in an outpatient setting without comorbidities? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Standard first-line regimens include amoxicillin (1g tid) or doxycycline (100mg bid); macrolides are alternative options in areas with low pneumococcal resistance."
+  },
+  {
+    "sample_id": "calib_047",
+    "domain": "Nephrology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: Define Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines. \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nKDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours.<|im_end|>",
+    "query": "Medical Review Query: Define Acute Kidney Injury (AKI) stage 1 according to the KDIGO clinical practice guidelines. \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "KDIGO Stage 1 AKI is defined as an increase in serum creatinine by >= 0.3 mg/dL within 48 hours, or a 1.5 to 1.9 times baseline increase within 7 days, or urine output < 0.5 mL/kg/h for 6-12 hours."
+  },
+  {
+    "sample_id": "calib_048",
+    "domain": "Gastroenterology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the classic diagnostic endoscopic and histological findings associated with Celiac Disease? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nEndoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification).<|im_end|>",
+    "query": "Medical Review Query: What are the classic diagnostic endoscopic and histological findings associated with Celiac Disease? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Endoscopic findings include scalloping and mucosal atrophy; histological features show intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting (Marsh classification)."
+  },
+  {
+    "sample_id": "calib_049",
+    "domain": "Hematology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: Differentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation. \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nIron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation.<|im_end|>",
+    "query": "Medical Review Query: Differentiate between absolute iron deficiency anemia and anemia of chronic disease based on ferritin and transferrin saturation. \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Iron deficiency anemia typically shows low serum ferritin (<30 ng/mL) and transferrin saturation (<20%). Anemia of chronic disease exhibits normal or elevated ferritin with low to normal transferrin saturation due to hepcidin mediation."
+  },
+  {
+    "sample_id": "calib_050",
+    "domain": "Emergency Medicine",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the immediate clinical management priorities for acute anaphylactic shock in an adult patient? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nImmediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning.<|im_end|>",
+    "query": "Medical Review Query: What are the immediate clinical management priorities for acute anaphylactic shock in an adult patient? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Immediate intramuscular epinephrine (0.3-0.5 mg of 1:1,000 solution into the anterolateral thigh), airway management, high-flow oxygen, aggressive IV isotonic fluid resuscitation, and supine positioning."
+  },
+  {
+    "sample_id": "calib_051",
+    "domain": "Rheumatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nAnti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis.<|im_end|>",
+    "query": "Medical Review Query: What autoantibody is considered most specific for systemic lupus erythematosus (SLE) and correlates with disease activity? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Anti-double-stranded DNA (anti-dsDNA) antibodies are highly specific for SLE and titer elevations often correlate with active lupus nephritis."
+  },
+  {
+    "sample_id": "calib_052",
+    "domain": "Pediatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nHallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress.<|im_end|>",
+    "query": "Medical Review Query: What are the hallmark signs and initial pharmacotherapy for acute laryngotracheobronchitis (croup)? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Hallmark signs include barking cough, inspiratory stridor, and hoarseness. Initial therapy is a single dose of oral or intramuscular dexamethasone (0.15-0.6 mg/kg) plus nebulized racemic epinephrine for moderate to severe distress."
+  },
+  {
+    "sample_id": "calib_053",
+    "domain": "Oncology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: Explain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target. \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nThe Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib.<|im_end|>",
+    "query": "Medical Review Query: Explain the oncogenic mechanism of BCR-ABL1 fusion kinase in chronic myeloid leukemia (CML) and its therapeutic target. \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "The Philadelphia chromosome translocation t(9;22) produces the constitutively active BCR-ABL1 tyrosine kinase, driving uninhibited granulocytic proliferation. It is targeted by tyrosine kinase inhibitors such as imatinib."
+  },
+  {
+    "sample_id": "calib_054",
+    "domain": "Dermatology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What clinical criteria constitute the ABCDE mnemonic used for melanoma screening? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nA: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics.<|im_end|>",
+    "query": "Medical Review Query: What clinical criteria constitute the ABCDE mnemonic used for melanoma screening? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "A: Asymmetry; B: Border irregularity; C: Color variation; D: Diameter > 6 mm; E: Evolving size, shape, or symptomatic characteristics."
+  },
+  {
+    "sample_id": "calib_055",
+    "domain": "Psychiatry",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nAt least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment.<|im_end|>",
+    "query": "Medical Review Query: What are the diagnostic DSM-5 time criteria and core symptoms required to diagnose a major depressive episode? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "At least 5 symptoms persisting for at least 2 weeks, with at least one symptom being depressed mood or anhedonia, accompanied by significant distress or functional impairment."
+  },
+  {
+    "sample_id": "calib_056",
+    "domain": "Toxicology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nN-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram.<|im_end|>",
+    "query": "Medical Review Query: What is the specific antidote for acetaminophen (paracetamol) hepatotoxicity and its therapeutic window? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "N-acetylcysteine (NAC) acts as a glutathione precursor to detoxify NAPQI. It is most effective when administered within 8 hours of acute ingestion based on the Rumack-Matthew nomogram."
+  },
+  {
+    "sample_id": "calib_057",
+    "domain": "Obstetrics & Gynecology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nPreeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances).<|im_end|>",
+    "query": "Medical Review Query: What criteria distinguish preeclampsia from gestational hypertension in a pregnant patient after 20 weeks gestation? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Preeclampsia requires new-onset hypertension (>=140/90 mmHg) accompanied by proteinuria (>=300 mg/24h or protein/creatinine >=0.3) or new-onset end-organ dysfunction (thrombocytopenia, renal insufficiency, impaired liver function, pulmonary edema, or persistent cerebral/visual disturbances)."
+  },
+  {
+    "sample_id": "calib_058",
+    "domain": "Geriatrics",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nDelirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages.<|im_end|>",
+    "query": "Medical Review Query: What are the key clinical indicators used to differentiate delirium from dementia in hospitalized elderly patients? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Delirium has acute onset, fluctuating course, impaired attention, and altered level of consciousness, often with reversible medical etiology. Dementia exhibits insidious onset, progressive cognitive decline, and preserved alertness until late stages."
+  },
+  {
+    "sample_id": "calib_059",
+    "domain": "Critical Care",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nSeptic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation.<|im_end|>",
+    "query": "Medical Review Query: What are the clinical criteria for septic shock according to the Sepsis-3 consensus definitions? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Septic shock requires persistent hypotension requiring vasopressors to maintain MAP >= 65 mmHg and a serum lactate level > 2 mmol/L despite adequate volume resuscitation."
+  },
+  {
+    "sample_id": "calib_060",
+    "domain": "Ophthalmology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nMedical Review Query: What are the immediate clinical presentations and emergency management of acute angle-closure glaucoma? \nExplain the clinical significance and evidence-based guideline recommendations.<|im_end|>\n<|im_start|>assistant\nSevere eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy.<|im_end|>",
+    "query": "Medical Review Query: What are the immediate clinical presentations and emergency management of acute angle-closure glaucoma? \nExplain the clinical significance and evidence-based guideline recommendations.",
+    "reference_context": "Severe eye pain, headache, nausea, blurred vision, colored halos around lights, fixed mid-dilated pupil, and markedly elevated intraocular pressure. Managed urgently with topical pressure-lowering agents, systemic acetazolamide/mannitol, and definitive laser peripheral iridotomy."
+  },
+  {
+    "sample_id": "calib_061",
+    "domain": "Endocrinology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nOffline Clinical Assistant: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nOutline diagnostic steps and differential considerations.<|im_end|>\n<|im_start|>assistant\nDiagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing.<|im_end|>",
+    "query": "Offline Clinical Assistant: What are the primary diagnostic thresholds for Type 2 Diabetes Mellitus based on fasting plasma glucose and HbA1c? \nOutline diagnostic steps and differential considerations.",
+    "reference_context": "Diagnostic criteria: Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during OGTT, or HbA1c >= 6.5% (48 mmol/mol), confirmed by repeat testing."
+  },
+  {
+    "sample_id": "calib_062",
+    "domain": "Cardiology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nOffline Clinical Assistant: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nOutline diagnostic steps and differential considerations.<|im_end|>\n<|im_start|>assistant\nACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels.<|im_end|>",
+    "query": "Offline Clinical Assistant: Explain the physiological mechanism of action of ACE inhibitors in reducing systemic arterial hypertension. \nOutline diagnostic steps and differential considerations.",
+    "reference_context": "ACE inhibitors block the conversion of angiotensin I to angiotensin II, decreasing systemic vascular resistance and aldosterone secretion while increasing bradykinin levels."
+  },
+  {
+    "sample_id": "calib_063",
+    "domain": "Pulmonology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nOffline Clinical Assistant: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nOutline diagnostic steps and differential considerations.<|im_end|>\n<|im_start|>assistant\nA post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines.<|im_end|>",
+    "query": "Offline Clinical Assistant: What spirometric ratio defines persistent airflow limitation in Chronic Obstructive Pulmonary Disease (COPD)? \nOutline diagnostic steps and differential considerations.",
+    "reference_context": "A post-bronchodilator FEV1/FVC ratio less than 0.70 confirms the presence of persistent airflow limitation per GOLD guidelines."
+  },
+  {
+    "sample_id": "calib_064",
+    "domain": "Pharmacology",
+    "raw_text": "<|im_start|>system\nYou are a clinical knowledge assistant. Answer the following medical query clearly and concisely.<|im_end|>\n<|im_start|>user\nOffline Clinical Assistant: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nOutline diagnostic steps and differential considerations.<|im_end|>\n<|im_start|>assistant\nCombining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation.<|im_end|>",
+    "query": "Offline Clinical Assistant: Why is concurrent administration of citalopram and monoamine oxidase inhibitors (MAOIs) strictly contraindicated? \nOutline diagnostic steps and differential considerations.",
+    "reference_context": "Combining SSRIs like citalopram with MAOIs carries a high risk of serotonin syndrome, characterized by hyperthermia, autonomic instability, and neuromuscular excitation."
+  }
+]

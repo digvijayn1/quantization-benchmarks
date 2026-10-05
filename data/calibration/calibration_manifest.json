@@ -1,0 +1,12 @@
+{
+  "dataset_name": "Medical_QA_Calibration_Corpus_v1",
+  "dataset_source": "Curated clinical reference corpus adhering to standard medical knowledge frameworks (USMLE / NICE / KDIGO / GOLD / AHA guidelines)",
+  "intended_use": "NNCF Post-Training Weight Compression Calibration (AWQ and Scale Estimation)",
+  "pii_content": "NONE (Fully de-identified medical knowledge and diagnostic scenarios; no real patient data)",
+  "sample_count": 64,
+  "sampling_strategy": "Stratified across 20 distinct clinical sub-specialties (cardiology, endocrinology, nephrology, oncology, neurology, etc.)",
+  "tokenization": "Qwen2.5 ChatML template (<|im_start|>, <|im_end|>)",
+  "maximum_sequence_length": 512,
+  "random_seed": 42,
+  "storage_path": "data/calibration/medical_calibration_data.json"
+}

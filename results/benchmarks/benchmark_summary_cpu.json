@@ -1,0 +1,1124 @@
+[
+  {
+    "variant_id": "awq/int4_asym_g128_awq",
+    "device": "CPU",
+    "model_dir": "models/openvino/awq/int4_asym_g128_awq",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 307.77,
+    "total_size_mb": 310.09,
+    "compression_ratio": 3.04,
+    "size_reduction_pct": 67.2,
+    "compile_time_seconds": 2.59,
+    "avg_latency_seconds": 2.888,
+    "avg_tokens_per_second": 44.61,
+    "avg_repetition_ratio": 0.022,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance in the body's cells. The main symptoms and diagnostic indicators can vary depending on the severity and duration of the disease but generally include:\n\n1. **Weight Loss**: Significant weight loss without attempting to gain it back for at least three months.\n\n2. **Increased Fatigue**: Persistent fatigue that does not improve with rest or sleep.\n\n3. **Fatigue**: Sudden feeling tired, often described as \"tired\" or \"foggy.\"\n\n4. **Excessive thirst**: Needing more water than usual.\n5. **S",
+        "generated_tokens": 128,
+        "latency_seconds": 3.352,
+        "tokens_per_second": 38.19,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolol can cause bronchial constriction, which is a common side effect of these medications. This constriction of the airways narrows the airway passage, making it harder for the lungs to exchange oxygen and carbon dioxide, leading to symptoms such as wheezing, shortness of breath, cough, and chest congestion.\n\nFor patients with asthma, using non-selective beta-blockers without careful consideration can lead to several serious complications:\n\n1. Bronchospasm: The narrowing of the airways causes the air passages to constrict, reducing their ability to",
+        "generated_tokens": 128,
+        "latency_seconds": 2.746,
+        "tokens_per_second": 46.62,
+        "repetition_ratio": 0.0341,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors** such as lispro, captopril, or enalapril.\n2. **Beta-blockers**, like atenolol or metoprolol, which can be used to reduce blood pressure by blocking beta receptors.\n3. **Diuretics**, such as lisinopril, which helps remove excess fluid from the body and lower blood pressure by increasing urine output.\n\nThese drugs are considered first-line because they have been shown to effectively treat high blood pressure in many patients.",
+        "generated_tokens": 128,
+        "latency_seconds": 2.75,
+        "tokens_per_second": 46.54,
+        "repetition_ratio": 0.012,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RLC) refers to a condition where the kidneys are not able to effectively filter out waste products and excess fluids from the blood, leading to increased amounts of these substances in the body's environment. This can lead to various health issues such as high blood pressure, fluid retention, and kidney stones.\n\nWhen drugs are administered through the bloodstream, they are absorbed into the bloodstream at their normal rate but then distributed throughout the body via the kidneys. If RLC is low, there may be less than optimal distribution of drug levels across the body, which can result in lower-than-target doses being delivered to the intended organ or system",
+        "generated_tokens": 128,
+        "latency_seconds": 2.689,
+        "tokens_per_second": 47.6,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a widely used instrument for assessing the severity of brain injury and coma status. The GCS consists of three main components: alertness, motor function, and cognitive function.\n\n1. **Alertness**: This component evaluates how aware the patient is of their surroundings. It assesses the patient's ability to maintain attention, focus on specific objects or people, and respond appropriately to stimuli.\n\n2. **Motor Function**: This component measures the patient's ability to move their body independently without assistance. It includes:\n   - **Mobility**: Assessing the patient's ability to walk, stand up from",
+        "generated_tokens": 128,
+        "latency_seconds": 2.903,
+        "tokens_per_second": 44.09,
+        "repetition_ratio": 0.0638,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "awq/int4_sym_g128_awq",
+    "device": "CPU",
+    "model_dir": "models/openvino/awq/int4_sym_g128_awq",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 306.44,
+    "total_size_mb": 308.51,
+    "compression_ratio": 3.06,
+    "size_reduction_pct": 67.3,
+    "compile_time_seconds": 1.52,
+    "avg_latency_seconds": 2.732,
+    "avg_tokens_per_second": 47.1,
+    "avg_repetition_ratio": 0.0153,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a high blood sugar level (hyperglycemia) that persists for more than two weeks. The most common early symptoms include:\n\n1. Weight loss: A significant weight loss of at least 5% in a short period.\n2. Fatigue or low energy levels: A feeling of being tired all day long.\n3. Increased thirst: A desire to drink water frequently.\n4. Frequent urination: Excessive need to use the bathroom often.\n5. Hunger: A strong urge to eat large amounts of food.\n\nThese symptoms can be present without any other signs of diabetes. However",
+        "generated_tokens": 128,
+        "latency_seconds": 3.151,
+        "tokens_per_second": 40.63,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolot have a broad spectrum of effects on the cardiovascular system but also include bronchodilatory properties that can cause bronchoconstriction. This makes them particularly effective for treating asthma by reducing airway resistance and constricting the airways to make breathing easier.\n\nHowever, these drugs also have significant side effects such as orthostatic hypotension (a drop in blood pressure when standing up), palpitations, dizziness, and other symptoms. The use of these medications is therefore not appropriate for those who have asthma because they may exacerbate their condition or lead to",
+        "generated_tokens": 128,
+        "latency_seconds": 2.654,
+        "tokens_per_second": 48.23,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drugs recommended to manage essential hypertension (high blood pressure) include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors**\n2. **Angiotensin receptor blockers (ARBs)**\n3. **Diuretics**\n4. **Beta-blockers**\n\nThese medications help reduce high blood pressure by blocking angiotensins and other substances that cause the blood vessels in the heart, brain, and kidneys to constrict. They also have a calming effect on the nervous system.\n\nOther options like beta blockers or ACE inhibitors may be prescribed if the patient has not responded well to these specific medications",
+        "generated_tokens": 128,
+        "latency_seconds": 2.613,
+        "tokens_per_second": 48.99,
+        "repetition_ratio": 0.0115,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RLC) can significantly impact how drugs are eliminated from the body and administered to patients. Here's a breakdown of how RLC affects medication dosing:\n\n1. **Renal Clearance**: This is measured in milliliters per minute (mL/min). A lower RLC means that more of the drug is filtered out of the blood before it reaches the kidneys.\n\n2. **Elimination Rate**: The rate at which the drug is eliminated from the body depends on its elimination half-life (t1/2), which is determined by factors like age, weight, and kidney function.\n\n3. **Dosage",
+        "generated_tokens": 128,
+        "latency_seconds": 2.617,
+        "tokens_per_second": 48.91,
+        "repetition_ratio": 0.0323,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the cognitive and functional status of patients who are unconscious or have lost consciousness after a coma. The GCS consists of three key components: alertness, awareness, and consciousness.\n\n1. **Alertness**:\n   - This refers to the patient's ability to be aware of their surroundings.\n   - It includes the patient's ability to respond to stimuli with appropriate responses.\n   - A score of 20 or above indicates that the patient is alert but not fully conscious.\n\n2. **Awareness**:\n   - The patient must be able to perceive external",
+        "generated_tokens": 128,
+        "latency_seconds": 2.626,
+        "tokens_per_second": 48.74,
+        "repetition_ratio": 0.0326,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "fp16",
+    "device": "CPU",
+    "model_dir": "models/openvino/fp16",
+    "xml_size_mb": 1.83,
+    "bin_size_mb": 942.29,
+    "total_size_mb": 944.12,
+    "compression_ratio": 1.0,
+    "size_reduction_pct": -0.0,
+    "compile_time_seconds": 1.43,
+    "avg_latency_seconds": 6.21,
+    "avg_tokens_per_second": 20.64,
+    "avg_repetition_ratio": 0.0121,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance or deficiency in the body's ability to use insulin effectively. The primary symptoms and diagnostic indicators can vary depending on the severity and duration of the disease but generally include:\n\n1. **Increased thirst and urination**: People with type 2 diabetes often experience increased thirst and frequent urination.\n\n2. **Unexplained weight loss**: Without proper nutrition, individuals may lose significant amounts of weight without trying.\n\n3. **Fatigue**: Feeling tired or weak even after adequate sleep.\n\n4. **Rash or skin problems**: Commonly seen in people",
+        "generated_tokens": 128,
+        "latency_seconds": 6.682,
+        "tokens_per_second": 19.16,
+        "repetition_ratio": 0.0202,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and metoprolol are commonly prescribed for the treatment of hypertension and other conditions that affect heart rate and blood pressure. However, they can have significant side effects when used in combination with certain medications or conditions, including asthma.\n\nWhen used together, these drugs can lead to a condition known as \"beta-adrenergic resistance,\" which is characterized by increased sensitivity to the effects of adrenaline (epinephrine) and other catecholamines. This resistance makes it more difficult for the body to respond effectively to these hormones, potentially leading to adverse reactions such as:\n\n1. Increased",
+        "generated_tokens": 128,
+        "latency_seconds": 6.154,
+        "tokens_per_second": 20.8,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs work by blocking angiotensin II, a hormone that causes blood vessels to constrict and increase blood pressure.\n\n2. **Diuretics**: These drugs help reduce fluid retention and lower blood pressure by increasing urine output and promoting the excretion of sodium and water from the body.\n\n3. **Beta-blockers**: These drugs block the action of beta-receptors on the heart and blood vessels, reducing their constriction and lowering blood pressure.\n\n4. ** Calcium channel",
+        "generated_tokens": 128,
+        "latency_seconds": 6.033,
+        "tokens_per_second": 21.22,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RCL) refers to a decrease in how quickly drugs are eliminated from the body after they reach the bloodstream. This can occur due to various factors such as kidney dysfunction, liver disease, or certain medications that affect RCL.\n\nThe dosing strategy for medications excreted primarily by the kidneys is typically adjusted based on the patient's renal function and the specific medication being administered. Here\u2019s how it generally works:\n\n1. **Assess Renal Function**: Before starting any new medication, healthcare providers evaluate the patient's renal function using tests like blood tests, imaging studies, or other diagnostic tools. This helps determine if",
+        "generated_tokens": 128,
+        "latency_seconds": 6.11,
+        "tokens_per_second": 20.95,
+        "repetition_ratio": 0.0291,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's consciousness state. The three main components of the GCS are:\n\n1. Visual acuity: This refers to the ability to see objects clearly and distinguish them from their surroundings. A score of 8 or higher indicates good visual acuity.\n\n2. Motor function: This component evaluates the patient's ability to move independently. It includes scores for:\n   - Eye opening reflex (0)\n   - Eye movement (0-3)\n   - Limb movement (0-4)\n\n3. Cognitive function: This component assesses the",
+        "generated_tokens": 128,
+        "latency_seconds": 6.071,
+        "tokens_per_second": 21.08,
+        "repetition_ratio": 0.0111,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "fp32",
+    "device": "CPU",
+    "model_dir": "models/openvino/fp32",
+    "xml_size_mb": 1.7,
+    "bin_size_mb": 942.38,
+    "total_size_mb": 944.08,
+    "compression_ratio": 1.0,
+    "size_reduction_pct": 0.0,
+    "compile_time_seconds": 1.11,
+    "avg_latency_seconds": 6.325,
+    "avg_tokens_per_second": 20.29,
+    "avg_repetition_ratio": 0.011,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance or deficiency in the body's ability to use insulin effectively. The primary symptoms and diagnostic indicators can vary depending on the severity and duration of the disease but generally include:\n\n1. **Increased thirst and urination**: This is often the first symptom of diabetes.\n2. **Fatigue**: Feeling very tired or weak.\n3. **Unexplained weight loss**: Even if eating normally, losing more than 5% of your body weight over several weeks.\n4. **Frequent urination**: Needing to go the bathroom frequently, especially at",
+        "generated_tokens": 128,
+        "latency_seconds": 6.965,
+        "tokens_per_second": 18.38,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and metoprolol are commonly prescribed for the treatment of hypertension and other conditions that affect heart rate and blood pressure. However, they can have significant side effects when used in combination with asthma medications.\n\nWhen combined with asthma medication, such as salbutamol (Albuterol) or terbutaline (Aliprazol), these drugs can lead to a condition known as \"asthma exacerbation.\" This occurs because the beta-blockers may cause bronchodilation, which is beneficial for asthma control but can also reduce airway resistance and make it easier for allergens",
+        "generated_tokens": 128,
+        "latency_seconds": 6.327,
+        "tokens_per_second": 20.23,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs work by blocking angiotensin II receptors and reducing its effects on blood vessels.\n\n2. **Diuretics**: These drugs help to reduce fluid retention and lower blood pressure by increasing urine output and promoting water reabsorption in the kidneys.\n\n3. **Beta-blockers**: These drugs block beta-adrenergic receptors, which can help to relax blood vessels and lower blood pressure.\n\n4. ** Calcium channel blockers**: These drugs block calcium channels in the heart muscle",
+        "generated_tokens": 128,
+        "latency_seconds": 6.097,
+        "tokens_per_second": 21.0,
+        "repetition_ratio": 0.0449,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RRC) refers to a condition where the kidney's ability to filter blood and remove waste products is impaired. This can lead to several issues in drug therapy:\n\n1. **Increased Drug Concentration**: With RRC decreased, there is less time for drugs to be eliminated from the body. As a result, the concentration of active drugs in the bloodstream increases.\n\n2. **Increased Drug Absorption**: The increased concentration of drugs means that they may be more rapidly absorbed into the bloodstream, potentially leading to faster onset of action or higher concentrations in the plasma.\n\n3. **Increased Drug Excretion**: With lower renal clearance",
+        "generated_tokens": 128,
+        "latency_seconds": 6.127,
+        "tokens_per_second": 20.89,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's consciousness state. The three main components of the GCS are:\n\n1. Visual acuity: This refers to the ability to see objects clearly and distinguish them from their surroundings. A score of 8 or higher indicates normal visual acuity.\n\n2. Motor function: This component evaluates the patient's ability to move independently without assistance. Scores range from 0 to 6, with higher scores indicating better motor function. \n\n3. Cognitive function: This includes assessing the patient's memory, attention, and problem-solving abilities. Scores range",
+        "generated_tokens": 128,
+        "latency_seconds": 6.108,
+        "tokens_per_second": 20.96,
+        "repetition_ratio": 0.0101,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_asym/g128",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_asym/g128",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 307.77,
+    "total_size_mb": 310.09,
+    "compression_ratio": 3.04,
+    "size_reduction_pct": 67.2,
+    "compile_time_seconds": 1.8,
+    "avg_latency_seconds": 2.951,
+    "avg_tokens_per_second": 44.01,
+    "avg_repetition_ratio": 0.031,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus (T2DM) is a chronic condition characterized by high blood sugar levels due to insulin resistance in the body's cells. The main symptoms and diagnostic indicators can vary depending on the severity and duration of the disease but generally include:\n\n1. **Increased thirst**\n   - Persistent feeling of needing to drink more water than usual.\n\n2. **Increased urination**\n   - Increased frequency and volume of urination compared to normal.\n\n3. **Weight Gain**\n   - Excessively consuming calories without sufficient energy expenditure.\n\n4. **Fatigue**\n   - Feeling tired or weak even after adequate sleep.\n\n5.",
+        "generated_tokens": 128,
+        "latency_seconds": 3.562,
+        "tokens_per_second": 35.93,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolol can have significant side effects on the heart and blood vessels when used for a long time or in combination with other medications that may also cause vasodilation (dilation of blood vessels). This is because these drugs can interfere with the normal function of the heart's natural mechanisms to regulate blood pressure and oxygen levels.\n\nWhen combined with asthma treatment, such as bronchodilators, non-selective beta-blockers can lead to:\n\n1. **Increased Heart Rate**: The medication can increase your heart rate slightly, which can make it harder for you to breathe.\n2",
+        "generated_tokens": 128,
+        "latency_seconds": 3.191,
+        "tokens_per_second": 40.11,
+        "repetition_ratio": 0.0202,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs block angiotensins and reduce blood pressure by relaxing blood vessel walls.\n2. **Beta-blockers**: They help to lower heart rate and blood pressure by blocking beta receptors on the heart.\n3. **Diuretics**: These drugs increase urine output and remove excess fluid from the body, lowering blood pressure by reducing blood volume.\n\nOther important medications may also be prescribed based on specific conditions or other factors such as age, sex, weight, and family history of hypertension",
+        "generated_tokens": 128,
+        "latency_seconds": 2.675,
+        "tokens_per_second": 47.86,
+        "repetition_ratio": 0.0213,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RCL) can significantly impact the dosing strategy for medications that are primarily eliminated through the kidneys. Here\u2019s how it affects different types of drugs:\n\n1. **CYP3A4**: This enzyme is responsible for metabolizing approximately 50% of all drugs in the body. Drugs with high RCL will be metabolized more rapidly and may require higher doses to achieve the same therapeutic effect.\n\n2. **CYP2D6**: This enzyme is involved in the metabolism of about half of all drugs in the body. Drugs with low RCL will have a slower rate of elimination and may need lower",
+        "generated_tokens": 128,
+        "latency_seconds": 2.672,
+        "tokens_per_second": 47.9,
+        "repetition_ratio": 0.0737,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a tool used to assess the severity of a patient's state of consciousness and cognitive function. The GCS consists of three main components:\n\n1. **Alertness**: This refers to the patient's ability to be alert and responsive to their surroundings.\n\n2. **Response to Stimulus**: It measures the patient's ability to respond to stimuli such as sounds, smells, or touch.\n\n3. **Activity Level**: This component evaluates the patient's level of activity by assessing their physical movements and responses to movement.\n\nEach component is scored on a scale from 0 to 5, with higher scores",
+        "generated_tokens": 128,
+        "latency_seconds": 2.652,
+        "tokens_per_second": 48.26,
+        "repetition_ratio": 0.04,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_asym/g256",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_asym/g256",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 306.8,
+    "total_size_mb": 309.12,
+    "compression_ratio": 3.05,
+    "size_reduction_pct": 67.3,
+    "compile_time_seconds": 1.79,
+    "avg_latency_seconds": 2.79,
+    "avg_tokens_per_second": 46.06,
+    "avg_repetition_ratio": 0.0205,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus (T2DM) is a chronic condition that affects the body's ability to produce enough insulin, which is essential for managing blood sugar levels. The main early symptoms and diagnostic indicators can vary depending on the individual case, but here are some general points:\n\n1. **Increased Blood Sugar Levels**: One of the most obvious signs of T2DM is high blood sugar levels. This can be measured by taking your blood glucose test results at home or by having your doctor measure it.\n\n2. **Weight Gain**: People with T2DM often gain weight as their bodies try to compensate for low blood sugar levels.",
+        "generated_tokens": 128,
+        "latency_seconds": 3.163,
+        "tokens_per_second": 40.46,
+        "repetition_ratio": 0.0291,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolol are used to treat symptoms of asthma because they have a broad effect on the airways, which can help reduce inflammation and mucus production. However, these medications come with some significant risks when used for asthma management.\n\nHere\u2019s why:\n\n1. **Risk of Overuse**: Beta blockers can cause side effects such as fatigue, dizziness, and weight loss. These side effects can be particularly problematic in individuals who already have asthma or are taking other medications that may also affect their heart health.\n\n2. **Increased Risk of Asthma**: Beta blockers can increase the",
+        "generated_tokens": 128,
+        "latency_seconds": 2.693,
+        "tokens_per_second": 47.52,
+        "repetition_ratio": 0.0102,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "Essential hypertension is managed by a combination of medications and lifestyle changes. The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs block angiotensin converting enzyme, which slows down the heart's ability to contract and relax, thereby reducing blood pressure.\n2. **Diuretics**: These drugs help remove excess fluid from the body, leading to lower blood pressure by decreasing the volume of blood in circulation.\n3. **Beta-blockers**: These drugs slow down the heart's activity, reduce blood pressure, and may also have",
+        "generated_tokens": 128,
+        "latency_seconds": 2.738,
+        "tokens_per_second": 46.74,
+        "repetition_ratio": 0.0326,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RR) means that your body is not filtering out as much of your blood as it should be able to do. This can happen due to a variety of reasons such as kidney disease, certain medications, or even age-related changes in the kidneys.\n\nWhen you have reduced renal function, your body's ability to remove drugs from your bloodstream decreases. This means that less drug will be eliminated from your system and more will remain in your blood. As a result, there may be higher levels of medication in your bloodstream compared to what would be needed if you had normal kidney function.\n\nTo manage this situation effectively, doctors often use",
+        "generated_tokens": 128,
+        "latency_seconds": 2.664,
+        "tokens_per_second": 48.05,
+        "repetition_ratio": 0.0088,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of brain injury and cognitive function after a traumatic event such as a car accident or assault. The GCS evaluates three key areas: physical status, personality traits, and behavior.\n\n1. Physical Status:\n   - **Alertness**: Assesses the patient's level of consciousness by evaluating their ability to be awakened from a coma.\n   - **Response to stimuli**: Evaluates the patient's responsiveness to external stimuli, including pain, touch, and verbal commands.\n   - **Behavioral responses**: Measures the patient's overall behavior, including motor activity, speech",
+        "generated_tokens": 128,
+        "latency_seconds": 2.694,
+        "tokens_per_second": 47.52,
+        "repetition_ratio": 0.022,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_asym/g32",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_asym/g32",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 327.77,
+    "total_size_mb": 330.09,
+    "compression_ratio": 2.86,
+    "size_reduction_pct": 65.0,
+    "compile_time_seconds": 1.81,
+    "avg_latency_seconds": 3.311,
+    "avg_tokens_per_second": 38.83,
+    "avg_repetition_ratio": 0.0059,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "The common early symptoms and diagnostic indicators of type 2 diabetes mellitus include:\n\n1. **Increased Blood Sugar**: Initially, there is a significant increase in blood sugar levels compared to normal levels.\n\n2. **Weight Loss**: Often accompanied by weight loss without changing diet or exercise.\n\n3. **Increased Fatigue**: Persistent fatigue that lasts for more than two weeks.\n\n4. **Changes in Appetite**: Increased hunger but not necessarily increased appetite.\n\n5. **Changes in Diet**: Changes in eating habits leading to changes in food intake and portion sizes.\n\n6. **Changes in Activity Level**: Decreased physical activity level.\n\n7. **Changes",
+        "generated_tokens": 128,
+        "latency_seconds": 3.434,
+        "tokens_per_second": 37.28,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and salbutamol can have significant effects on the cardiovascular system when used for asthma management. These medications primarily block the \u03b21 receptors of the bronchial smooth muscle, which is a common cause of asthma attacks.\n\nWhen used in combination with other asthma medications or inhaled corticosteroids, these drugs can lead to adverse effects such as:\n\n1. **Increased Asthma Symptoms**: The combination of \u03b2-blockers and other asthma treatments can increase the risk of exacerbations due to side effects like coughing, wheezing, and shortness of breath.\n\n2. **Card",
+        "generated_tokens": 128,
+        "latency_seconds": 2.961,
+        "tokens_per_second": 43.23,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin II Receptor Blockers (ARBs)**: These drugs block the action of angiotensin II on the renin-angiotensin-aldosterone system, which is a key component in the pathogenesis of hypertension.\n\n2. **Diuretics**: These drugs help to lower blood pressure by increasing the excretion of sodium and water from the body's tissues.\n\n3. **Beta-blockers**: These drugs reduce the activity of the sympathetic nervous system, thereby lowering blood pressure.\n\n4. **\u03b1-blockers**:",
+        "generated_tokens": 128,
+        "latency_seconds": 3.169,
+        "tokens_per_second": 40.39,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RRC) refers to a decrease in the amount of drug that is eliminated from the body's kidneys. This can be caused by various factors such as age, genetics, or certain medications. When RRC is low, it means that less of the drug reaches the blood-brain barrier and other organs.\n\nThe impact on medication dosing strategies depends on several factors:\n\n1. **Dose Adjustment**: Medications with lower RRC may need to be adjusted based on their half-life and volume of distribution. For example, if a drug has a longer half-life and a smaller volume of distribution, its effective dose might",
+        "generated_tokens": 128,
+        "latency_seconds": 3.506,
+        "tokens_per_second": 36.51,
+        "repetition_ratio": 0.0194,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's injury and the level of consciousness they have experienced during the last 24 hours. The GCS consists of three main components: \n\n1. **Alertness**: This component evaluates whether a patient can be awakened from sleep or has been awakened by another person.\n\n2. **Response to stimuli**: It measures the patient's ability to respond to various stimuli such as light, sound, touch, and pain.\n\n3. **Behavioral responses**: This component includes the patient's actions and behaviors that indicate their state of consciousness at different times",
+        "generated_tokens": 128,
+        "latency_seconds": 3.486,
+        "tokens_per_second": 36.72,
+        "repetition_ratio": 0.01,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_asym/g64",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_asym/g64",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 314.44,
+    "total_size_mb": 316.76,
+    "compression_ratio": 2.98,
+    "size_reduction_pct": 66.4,
+    "compile_time_seconds": 2.81,
+    "avg_latency_seconds": 3.387,
+    "avg_tokens_per_second": 38.77,
+    "avg_repetition_ratio": 0.0071,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance or deficiency in the body. The main early symptoms and diagnostic indicators include:\n\n1. **Weight Loss**: Significant weight loss without significant change in diet.\n2. **Increased Hunger and Appetite**: A desire for more food than usual.\n3. **Fatigue**: Feeling tired even after adequate sleep.\n4. **Loss of Appetite**: Decrease in appetite when fasting (e.g., feeling hungry but not eating).\n5. **Frequent urination**: Excessive urination, often with no clear reason.\n6. **Diarr",
+        "generated_tokens": 128,
+        "latency_seconds": 4.413,
+        "tokens_per_second": 29.01,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers (NSBs) like propranolol and metoprolol can cause significant side effects when used to treat asthma due to their ability to reduce airway resistance and constrict the airways.\n\n1. **Asthma Symptoms**: Asthma is characterized by wheezing, coughing, and shortness of breath. Beta-blockers can cause bronchodilation, which may lead to increased airway resistance and exacerbation of symptoms.\n\n2. **Respiratory Tract Inflammation**: Beta-blockers can also increase inflammation in the airways, potentially leading to further narrowing of the airways",
+        "generated_tokens": 128,
+        "latency_seconds": 3.477,
+        "tokens_per_second": 36.82,
+        "repetition_ratio": 0.0253,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Diuretics** - These drugs help to reduce blood pressure by increasing urine output and promoting fluid excretion from the body.\n\n2. **Beta-blockers** - These medications block the action of beta-receptors on the heart, which can lower blood pressure.\n\n3. **Angiotensin-converting enzyme (ACE) inhibitors** - These drugs work by blocking angiotensinogen in the body, leading to a decrease in blood volume and pressure.\n\n4. **Angiotensin II receptor blockers (ARBs)** - Similar to ACE",
+        "generated_tokens": 128,
+        "latency_seconds": 3.3,
+        "tokens_per_second": 38.79,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RRC) refers to a decrease in the amount of drug that is filtered and eliminated from the body's kidney function. This can be due to various reasons such as:\n1. **Kidney Disease**: Chronic kidney disease or dialysis use can lead to decreased RRC.\n2. **Medication Excretion**: Some drugs have been shown to excrete more slowly through the kidneys compared to others.\n\nThe impact on medication dosing depends on several factors:\n\n### 1. **Dosage Adjustment**\n   - **Increased Dosage**: If the patient needs to take more than usual doses, they may need to adjust",
+        "generated_tokens": 128,
+        "latency_seconds": 2.963,
+        "tokens_per_second": 43.2,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized scale used to assess the severity of a person's state of consciousness and alertness. It consists of 10 questions that are answered by a score between 0 and 3, with higher scores indicating more severe impairment of consciousness.\n\nThree key components of the GCS are:\n\n1. **Alertness**: This refers to the ability to maintain awareness without being distracted or lost in thought. A score of 2 indicates minimal alertness, while a score of 4 suggests complete loss of awareness.\n\n2. **Confusion**: This component evaluates whether a patient can still be confused",
+        "generated_tokens": 128,
+        "latency_seconds": 2.781,
+        "tokens_per_second": 46.03,
+        "repetition_ratio": 0.0102,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_sym/g128",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_sym/g128",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 306.44,
+    "total_size_mb": 308.51,
+    "compression_ratio": 3.06,
+    "size_reduction_pct": 67.3,
+    "compile_time_seconds": 1.57,
+    "avg_latency_seconds": 2.772,
+    "avg_tokens_per_second": 45.93,
+    "avg_repetition_ratio": 0.0178,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a high blood sugar level due to insulin resistance in the body's cells. The main signs and symptoms include:\n\n1. **Weight Loss**: Rapid weight loss without any other changes in diet or exercise.\n2. **Frequent urination**: Excessive need for water to be excreted.\n3. **Increased thirst**: Need to drink more than usual.\n4. **Fatigue**: Feeling tired all the time.\n5. **Excess Weight Gain**: Not losing weight despite trying to maintain your current weight.\n6. **Insulin Resistance**: Cells not being able to use insulin properly.",
+        "generated_tokens": 128,
+        "latency_seconds": 3.267,
+        "tokens_per_second": 39.18,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolot are commonly prescribed to treat symptoms of asthma due to their action as beta blockers. These medications help reduce airway inflammation by relaxing the muscles that constrict the airways. However, they also have side effects such as dry mouth, blurred vision, and palpitations.\n\nWhen used for long-term treatment of asthma, these drugs can lead to a condition called \"beta-adrenergic overactivity,\" which is characterized by increased heart rate, faster heartbeat, and higher blood pressure. This can cause other health issues including high blood pressure, heart disease, and stroke.",
+        "generated_tokens": 128,
+        "latency_seconds": 2.796,
+        "tokens_per_second": 45.78,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors** such as **furosemide**, which work by blocking angiotensins and reducing blood pressure.\n2. **Angiotensin receptor blockers (ARBs)** like **dobutamine**, which also block angiotensins but have different effects on blood pressure compared to ACE inhibitors.\n\nBoth of these drugs are effective in treating high blood pressure and should be used in combination with lifestyle changes and other medications as prescribed by a healthcare provider.",
+        "generated_tokens": 120,
+        "latency_seconds": 2.487,
+        "tokens_per_second": 48.25,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RLC) can significantly affect how drugs are administered to patients with kidney disease. Here's a detailed look at how RLC impacts medication dosing strategies:\n\n### Understanding Renal Clearance\n\nRenal clearance is a measure of how well a drug or medication is eliminated from the body through the kidneys. It\u2019s typically expressed as a percentage of total body volume and is calculated using the formula:\n\n\\[ \\text{RCL} = \\frac{\\text{Amount of Drug}}{\\text{Volume of Blood Exchanged}} \\times 100\\% \\]\n\nFor example, if someone has a RLC of",
+        "generated_tokens": 128,
+        "latency_seconds": 2.673,
+        "tokens_per_second": 47.89,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a comprehensive assessment tool used to evaluate the state of consciousness and cognitive function of patients before they are admitted to a hospital or undergo other types of treatment. The GCS consists of three key components: alertness, awareness, and consciousness.\n\n1. **Alertness**: This component assesses whether a patient is aware that he or she has been injured or that someone else is taking care of him/her.\n   - If a patient is not aware that he or she has been injured, this indicates a lack of awareness.\n\n2. **Awareness**: This component evaluates whether a patient is fully conscious",
+        "generated_tokens": 128,
+        "latency_seconds": 2.636,
+        "tokens_per_second": 48.56,
+        "repetition_ratio": 0.0891,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_sym/g256",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_sym/g256",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 305.66,
+    "total_size_mb": 307.73,
+    "compression_ratio": 3.07,
+    "size_reduction_pct": 67.4,
+    "compile_time_seconds": 1.58,
+    "avg_latency_seconds": 2.783,
+    "avg_tokens_per_second": 46.32,
+    "avg_repetition_ratio": 0.0149,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a high blood sugar level (hyperglycemia) that persists despite normal glucose levels in the blood. The main signs and symptoms of type 2 diabetes include:\n\n1. **Weight Gain**: A significant increase in body weight over time.\n2. **Increased Blood Sugar Levels**: Higher than normal blood sugar levels measured at any given time.\n3. **Frequent Urination**: Excessive urination to produce more urine.\n4. **Fatigue**: Feeling tired or weak even after minimal physical activity.\n5. **Excess Weight Gain**: Obese individuals gain extra weight due to increased insulin",
+        "generated_tokens": 128,
+        "latency_seconds": 3.284,
+        "tokens_per_second": 38.98,
+        "repetition_ratio": 0.0222,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and dobutamine are used to treat the symptoms of asthma by reducing airway inflammation and hyperresponsiveness. However, they carry significant risks when used for long-term treatment due to their effects on airways.\n\nHere\u2019s why using these drugs excessively can lead to serious side effects:\n\n1. **Respiratory Overload**: These medications cause bronchoconstriction, which narrows the airways and makes it harder for the body to breathe. This is a major risk because overuse can lead to severe respiratory distress, such as wheezing, coughing, and shortness of",
+        "generated_tokens": 128,
+        "latency_seconds": 2.651,
+        "tokens_per_second": 48.29,
+        "repetition_ratio": 0.0111,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors** such as **dosacor**, which are effective in reducing blood pressure and lowering the risk of heart disease.\n2. **Angiotensin receptor blockers (ARBs)** like **tamsiprol**, which also help reduce blood pressure by blocking angiotensins.\n3. **Diuretics** like **furosemide**, which can be used to lower blood pressure by increasing urine output and removing excess fluid from the body.\n\nThese drugs are considered the standard treatment because they",
+        "generated_tokens": 128,
+        "latency_seconds": 2.662,
+        "tokens_per_second": 48.09,
+        "repetition_ratio": 0.0122,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RLC) refers to a decrease in the rate at which drugs are eliminated from the body through the kidneys. This can lead to higher than normal levels of drug concentrations in the blood and lower than normal plasma concentrations in the urine. As a result, patients with RLC impairments may experience excessive drug concentrations in their bloodstream and low plasma levels in their urine.\n\nThe dosing strategies for these patients will be adjusted accordingly:\n\n1. **Increased Blood Concentration**: Patients with impaired renal function often require higher doses of certain medications because they are metabolized more slowly. Higher doses allow the patient to maintain effective treatment while minimizing",
+        "generated_tokens": 128,
+        "latency_seconds": 2.673,
+        "tokens_per_second": 47.89,
+        "repetition_ratio": 0.0185,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized assessment tool used to measure cognitive and functional abilities in individuals who have been assessed by a healthcare professional as having a high risk of developing dementia or other forms of brain disease. The GCS consists of three main components: Behavioral Assessment, Functional Assessment, and Neurological Examination.\n\n1. **Behavioral Assessment**:\n   - This component assesses the individual's ability to perform daily activities.\n   - It includes questions about personal hygiene, self-care, social skills, and general behavior.\n   - A score of 0 indicates no impairment, while a score of 3 or higher suggests",
+        "generated_tokens": 128,
+        "latency_seconds": 2.646,
+        "tokens_per_second": 48.37,
+        "repetition_ratio": 0.0105,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_sym/g32",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_sym/g32",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 322.44,
+    "total_size_mb": 324.51,
+    "compression_ratio": 2.91,
+    "size_reduction_pct": 65.6,
+    "compile_time_seconds": 1.51,
+    "avg_latency_seconds": 3.001,
+    "avg_tokens_per_second": 42.86,
+    "avg_repetition_ratio": 0.0231,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a series of symptoms that may begin to appear gradually over time. The most common initial signs include:\n\n1. **Weight Loss**: A significant reduction in weight without loss of muscle mass.\n2. **Increased Hunger**: Feeling more hungry than usual despite decreased food intake.\n3. **Fatigue**: Feeling tired or weak even after adequate sleep.\n4. **Changes in Appetite**: Increased appetite but not necessarily increased calorie consumption.\n\nThese symptoms can be observed for several years before being diagnosed with type 2 diabetes. However, they do not always occur at the same rate and it's important to consult",
+        "generated_tokens": 128,
+        "latency_seconds": 3.45,
+        "tokens_per_second": 37.1,
+        "repetition_ratio": 0.0099,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolol are used to treat heart disease by reducing the force of contraction of the heart muscle and lowering blood pressure. They are effective for treating hypertension and angina pectoris but have significant side effects on the cardiovascular system.\n\nWhen used alone or in combination with other medications, these drugs can lead to serious adverse reactions such as hypotension (low blood pressure), orthostatic hypotension (falling from a seated position to standing), tachycardia (abnormally fast heartbeat), and bradycardia (abnormally slow heartbeat). These conditions",
+        "generated_tokens": 128,
+        "latency_seconds": 2.895,
+        "tokens_per_second": 44.22,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors**: These drugs work by increasing the levels of a hormone called angiotensin II in the body, which helps to lower blood pressure and reduce the risk of heart disease.\n2. **Diuretics**: These drugs help remove excess fluid from the body, thereby lowering blood pressure and reducing the risk of high blood pressure or stroke.\n3. **Beta-blockers**: These drugs block the action of adrenaline that causes an increase in heart rate and blood pressure, leading to a decrease in blood pressure",
+        "generated_tokens": 128,
+        "latency_seconds": 2.89,
+        "tokens_per_second": 44.28,
+        "repetition_ratio": 0.0204,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (reduced glomerular filtration rate) can significantly impact the dosing strategy for medications that are primarily eliminated through the kidneys. Here\u2019s how it affects dosing:\n\n1. **Increased Potency**: With reduced renal clearance, more of a given dose is eliminated from the body's circulation compared to when renal function is normal. This means that less medication will be absorbed into the bloodstream and may not reach therapeutic levels in the blood.\n\n2. **Increased Time to Reach Effective Levels**: The time required for the drug to reach its peak concentration in the blood increases with reduced renal clearance. This means that patients may need to",
+        "generated_tokens": 128,
+        "latency_seconds": 2.867,
+        "tokens_per_second": 44.64,
+        "repetition_ratio": 0.0476,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of brain injury and coma status by evaluating the patient's level of consciousness and alertness. The three main components of the GCS are:\n\n1. Alertness: This refers to the patient's ability to be aware of their surroundings and maintain eye contact. It indicates whether the patient can be easily awakened from sleep or if they remain completely unconscious.\n\n2. Response to stimuli: This component evaluates the patient's ability to respond to various stimuli such as pain, touch, temperature, and light. A score below 3 indicates that the patient has no response",
+        "generated_tokens": 128,
+        "latency_seconds": 2.904,
+        "tokens_per_second": 44.08,
+        "repetition_ratio": 0.0377,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int4_sym/g64",
+    "device": "CPU",
+    "model_dir": "models/openvino/int4_sym/g64",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 311.77,
+    "total_size_mb": 313.84,
+    "compression_ratio": 3.01,
+    "size_reduction_pct": 66.8,
+    "compile_time_seconds": 1.73,
+    "avg_latency_seconds": 2.876,
+    "avg_tokens_per_second": 44.73,
+    "avg_repetition_ratio": 0.019,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a high blood sugar level (hyperglycemia) that persists despite efforts to control blood glucose levels with medications or diet changes. The most common early symptoms and diagnostic indicators include:\n\n1. **Increased thirst**\n   - People with type 2 diabetes may experience increased thirst as their body becomes less efficient at using insulin.\n\n2. **Increased urination**\n   - Excess fluid intake can lead to increased urination, which might be mistaken for dehydration.\n\n3. **Weight loss**\n   - Weight loss without trying to eat more than usual could indicate diabetes.\n\n4. **Fatigue**",
+        "generated_tokens": 128,
+        "latency_seconds": 3.293,
+        "tokens_per_second": 38.87,
+        "repetition_ratio": 0.0112,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and atenolam are used to treat symptoms of asthma by reducing airway resistance and inflammation. However, they should not be used as a substitute for the care provided by a healthcare provider who is trained to manage asthma effectively.\n\nHere's why:\n\n1. **Risk of Asthma Reversal**: Propranolol and atenolam can lead to a condition called \"asthma reversal,\" where the patient may experience symptoms that seem to disappear but then return later. This is because these medications block the receptors on the airways that normally cause bronchoconstriction (red",
+        "generated_tokens": 128,
+        "latency_seconds": 2.733,
+        "tokens_per_second": 46.83,
+        "repetition_ratio": 0.0109,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-converting enzyme (ACE) inhibitors** and **angiotensin receptor blockers (ARBs)**: These drugs help to reduce blood pressure by blocking the action of angiotensin I converting enzyme (ACE), which is responsible for the production of angiotensin II. This leads to a decrease in blood pressure.\n\n2. **Diuretics**: These drugs increase the amount of fluid in the body and lower blood pressure by reducing the amount of fluid that collects in the veins and arteries. They also help to lower blood",
+        "generated_tokens": 128,
+        "latency_seconds": 2.85,
+        "tokens_per_second": 44.92,
+        "repetition_ratio": 0.044,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RCL) can significantly impact the dosing strategy of medications that are primarily eliminated in the kidneys. This is because lower RCL means that a larger dose of medication must be administered to achieve the same therapeutic effect as before. Here's how it affects dosing:\n\n1. **Increased Potency**: With less effective kidney function, more of the drug will need to be metabolized and excreted from the body. This results in higher doses being required to achieve the desired therapeutic effect.\n\n2. **Time to Tolerance**: The time it takes for the drug to reach its peak concentration in the blood after administration",
+        "generated_tokens": 128,
+        "latency_seconds": 2.797,
+        "tokens_per_second": 45.77,
+        "repetition_ratio": 0.0098,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's state of consciousness by evaluating their ability to be alert and responsive to stimuli. The GCS consists of three main components: awareness, responsiveness to stimuli, and withdrawal from stimuli.\n\n1. Awareness: This component evaluates whether a person can be fully aware of their surroundings and environment. It includes questions about being able to follow instructions or directions given by others, such as \"What do you want me to do?\" or \"Tell me what I should do next.\"\n\n2. Responsiveness to stimuli: This component focuses on assessing whether a person",
+        "generated_tokens": 128,
+        "latency_seconds": 2.709,
+        "tokens_per_second": 47.26,
+        "repetition_ratio": 0.019,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "int8_asym",
+    "device": "CPU",
+    "model_dir": "models/openvino/int8_asym",
+    "xml_size_mb": 2.14,
+    "bin_size_mb": 472.6,
+    "total_size_mb": 474.74,
+    "compression_ratio": 1.99,
+    "size_reduction_pct": 49.7,
+    "compile_time_seconds": 1.66,
+    "avg_latency_seconds": 3.641,
+    "avg_tokens_per_second": 35.22,
+    "avg_repetition_ratio": 0.0136,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance or deficiency in the body's ability to use insulin effectively. The primary symptoms and diagnostic indicators can vary depending on the severity and duration of the disease but generally include:\n\n1. **Increased thirst and urination**: This is often the first symptom of diabetes.\n2. **Fatigue**: Feeling very tired or weak.\n3. **Unexplained weight loss**: Even if eating normally, losing more than expected.\n4. **Frequent urination**: Needing to go the bathroom frequently.\n5. **Numbness or tingling sensations**:",
+        "generated_tokens": 128,
+        "latency_seconds": 3.94,
+        "tokens_per_second": 32.49,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and metoprolol are commonly prescribed for the treatment of hypertension and other conditions that affect heart rate and blood pressure. However, they can have significant side effects when used in combination with certain medications or conditions, including asthma.\n\nWhen used together, these drugs can lead to a condition known as \"beta-adrenergic resistance,\" which is characterized by increased sensitivity to the effects of adrenaline (epinephrine) and other catecholamines. This resistance makes it more difficult for the body to respond effectively to these hormones, potentially leading to adverse reactions such as:\n\n1. Increased",
+        "generated_tokens": 128,
+        "latency_seconds": 3.541,
+        "tokens_per_second": 36.15,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs work by blocking angiotensin II, a hormone that causes blood vessels to constrict and increases blood pressure.\n\n2. **Diuretics**: These drugs help reduce fluid retention and lower blood pressure by increasing urine output and promoting the excretion of sodium and water from the body.\n\n3. **Beta-blockers**: These drugs block the action of beta-receptors on the heart and blood vessels, reducing heart rate and blood pressure.\n\n4. ** Calcium channel blockers**:",
+        "generated_tokens": 128,
+        "latency_seconds": 3.54,
+        "tokens_per_second": 36.16,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RRC) refers to a condition where the kidney's ability to filter blood and remove waste products is impaired. This can lead to several issues in drug therapy:\n\n1. **Increased Drug Concentration**: With RRC decreased, there is less time for drugs to be eliminated from the body. As a result, the concentration of active drugs in the bloodstream increases.\n\n2. **Increased Drug Absorption**: The increased concentration of drugs means that more of them will reach the target site in the body, potentially leading to higher concentrations of the drug in the blood.\n\n3. **Increased Drug Excretion**: With fewer drugs being",
+        "generated_tokens": 128,
+        "latency_seconds": 3.583,
+        "tokens_per_second": 35.73,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's brain injury or coma. The three main components of the GCS are:\n\n1. **Alertness**: This refers to the patient's ability to respond to stimuli and maintain eye contact. It is assessed by asking if the patient can be awakened from sleep and whether they show any signs of alertness.\n\n2. **Response to Pain**: This component evaluates the patient's ability to detect pain and discomfort. It is measured by asking if the patient shows any signs of pain when touched or felt.\n\n3. **Response to Stimulation**:",
+        "generated_tokens": 128,
+        "latency_seconds": 3.6,
+        "tokens_per_second": 35.55,
+        "repetition_ratio": 0.068,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "ratio_experiments/int4_sym_g128_r0.5",
+    "device": "CPU",
+    "model_dir": "models/openvino/ratio_experiments/int4_sym_g128_r0.5",
+    "xml_size_mb": 2.12,
+    "bin_size_mb": 390.7,
+    "total_size_mb": 392.82,
+    "compression_ratio": 2.4,
+    "size_reduction_pct": 58.4,
+    "compile_time_seconds": 1.4,
+    "avg_latency_seconds": 3.24,
+    "avg_tokens_per_second": 39.66,
+    "avg_repetition_ratio": 0.0229,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is characterized by a high blood sugar level that can lead to various complications if left untreated or managed improperly. The typical early symptoms and diagnostic indicators include:\n\n1. **Increased Blood Sugar Levels**: People with type 2 diabetes often experience higher than normal levels of glucose in their blood.\n\n2. **Weight Gain**: There may be a noticeable increase in weight over time due to the increased demand for insulin.\n\n3. **Fatigue**: Patients might feel tired or weak frequently.\n\n4. **Excessive thirst and urination**: These are signs of hyperglycemia (high blood sugar).\n\n5. **Cuts",
+        "generated_tokens": 128,
+        "latency_seconds": 3.668,
+        "tokens_per_second": 34.9,
+        "repetition_ratio": 0.0211,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and salbutamol are often prescribed to treat symptoms of asthma due to their ability to reduce airway resistance and inflammation. However, when these medications are used for long-term treatment or as a preventive measure, they can have significant side effects on the respiratory system.\n\nThe reason for this is that non-selective beta-blockers act primarily by blocking the action of beta-adrenergic receptors on bronchial smooth muscle cells. This results in a reduction in both bronchodilation (the production of mucus) and bronchoconstriction (the constriction of the airways).",
+        "generated_tokens": 128,
+        "latency_seconds": 3.138,
+        "tokens_per_second": 40.79,
+        "repetition_ratio": 0.0215,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. **Angiotensin-Converting Enzyme (ACE) inhibitors**: These drugs work by blocking angiotensin-converting enzyme (ACE), which normally converts angiotensin I to angiotensin II. This leads to a decrease in blood pressure and the production of aldosterone.\n\n2. **Diuretics**: These drugs increase urine output and lower blood pressure by promoting the excretion of sodium and water from the body into the kidneys. They also help reduce fluid retention and improve overall kidney function.\n\n3. **Beta-blockers**:",
+        "generated_tokens": 128,
+        "latency_seconds": 3.138,
+        "tokens_per_second": 40.8,
+        "repetition_ratio": 0.0233,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance refers to a condition where the kidney's ability to filter blood and remove waste products from the body is impaired. This can lead to increased drug concentrations in the bloodstream due to faster elimination of drugs from the body.\n\nThe dosing strategy for medications that are primarily eliminated through the kidneys (such as those used for diuretics or certain antibiotics) will need to be adjusted accordingly. Here\u2019s how it typically works:\n\n1. **Increased Potency**: If the medication has already been metabolized extensively in the liver before reaching the kidneys, its potency may increase because more of the original dose remains in the blood after being filtered out",
+        "generated_tokens": 128,
+        "latency_seconds": 3.107,
+        "tokens_per_second": 41.2,
+        "repetition_ratio": 0.0091,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized assessment tool used to evaluate the severity of a patient's coma or brain injury. The GCS consists of three key components that measure different aspects of cognitive function and alert healthcare providers to potential issues with the patient's health status.\n\n1. Motor Function: This component assesses the patient's ability to move their limbs independently. It includes:\n   - Ability to walk without assistance\n   - Ability to stand up from a sitting position\n   - Ability to sit up on one leg if needed\n\n2. Language and Communication: This component evaluates the patient's ability to communicate verbally.",
+        "generated_tokens": 128,
+        "latency_seconds": 3.153,
+        "tokens_per_second": 40.6,
+        "repetition_ratio": 0.0396,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "ratio_experiments/int4_sym_g128_r0.8",
+    "device": "CPU",
+    "model_dir": "models/openvino/ratio_experiments/int4_sym_g128_r0.8",
+    "xml_size_mb": 2.11,
+    "bin_size_mb": 340.57,
+    "total_size_mb": 342.68,
+    "compression_ratio": 2.75,
+    "size_reduction_pct": 63.7,
+    "compile_time_seconds": 1.7,
+    "avg_latency_seconds": 2.985,
+    "avg_tokens_per_second": 43.15,
+    "avg_repetition_ratio": 0.025,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels due to insulin resistance or insufficient insulin production in the body. The primary early symptoms and diagnostic indicators include:\n\n1. **Increased Blood Sugar Levels**: People with type 2 diabetes often experience increased blood glucose levels over time.\n\n2. **Weight Gain**: There's usually no significant weight gain initially but can increase later on if the patient has been inactive for some time.\n\n3. **Fatigue**: Patients may feel tired more frequently than usual.\n\n4. **Excessive Hunger**: They might feel hungry even when they don't eat much.\n\n5. **Gloss",
+        "generated_tokens": 128,
+        "latency_seconds": 3.476,
+        "tokens_per_second": 36.83,
+        "repetition_ratio": 0.02,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like propranolol and propranolate are often prescribed to treat symptoms of asthma due to their action on the bronchial smooth muscle. However, they should be used with extreme caution in patients with asthma because:\n\n1. **Increased Risk of Asthma Reactions**: Non-selective beta-blockers can cause or exacerbate asthma by directly acting on the airways. This is because these drugs block the effects of adrenaline (the hormone that causes the constriction of the airways), which leads to a decrease in the responsiveness of the airways to allergens and other triggers.\n\n2. **Delayed",
+        "generated_tokens": 128,
+        "latency_seconds": 2.903,
+        "tokens_per_second": 44.09,
+        "repetition_ratio": 0.0319,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drug classes recommended for managing essential hypertension include:\n\n1. Angiotensin-converting enzyme (ACE) inhibitors: These drugs work by blocking angiotensins and reducing blood pressure.\n2. Beta-blockers: They help to relax the blood vessels and reduce blood pressure.\n3. Calcium channel blockers: These drugs block calcium channels in the heart muscle, which can slow down heart rate and lower blood pressure.\n4. Diuretics: These drugs increase urine output and remove excess fluid from the body, helping to lower blood pressure.\n5. Thiazide diuretics: These drugs also increase urine output",
+        "generated_tokens": 128,
+        "latency_seconds": 2.851,
+        "tokens_per_second": 44.9,
+        "repetition_ratio": 0.0326,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (the rate at which a drug is eliminated from the body) can significantly impact the dosing strategy for medications that are primarily excreted by the kidneys. This is because the kidney's ability to filter and concentrate blood decreases with age or when there are underlying health conditions like diabetes, chronic kidney disease, or certain medications.\n\nHere\u2019s how reduced renal clearance affects the dosing strategy:\n\n1. **Increased Potency**: With lower renal clearance, drugs that are already very potent may be more effective but also have higher concentrations in the bloodstream. Therefore, they need to be administered at a higher dose to maintain therapeutic levels.",
+        "generated_tokens": 128,
+        "latency_seconds": 2.85,
+        "tokens_per_second": 44.92,
+        "repetition_ratio": 0.0189,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) evaluates three key behavioral responses that can be used to assess a patient's state of consciousness and alertness: visual evoked potential (VEP), pupillary light reflex (PLR), and corneal reflex (CR). These components help determine if a patient is fully awake or has any signs of coma.\n\n1. **Visual Evoked Potential (VEP)**:\n   - This component measures the patient\u2019s ability to respond to stimuli by detecting changes in electrical activity in the brain.\n   - A normal VEP typically indicates a healthy brain, while a diminished or absent VEP suggests a lack",
+        "generated_tokens": 128,
+        "latency_seconds": 2.843,
+        "tokens_per_second": 45.02,
+        "repetition_ratio": 0.0217,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "scale_estimation/int4_asym_g128_scale_est",
+    "device": "CPU",
+    "model_dir": "models/openvino/scale_estimation/int4_asym_g128_scale_est",
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 307.77,
+    "total_size_mb": 310.09,
+    "compression_ratio": 3.04,
+    "size_reduction_pct": 67.2,
+    "compile_time_seconds": 1.7,
+    "avg_latency_seconds": 2.768,
+    "avg_tokens_per_second": 46.44,
+    "avg_repetition_ratio": 0.039,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition that can be diagnosed through several key diagnostic indicators:\n\n1. **History of Risk Factors**: People with a family history of type 2 diabetes or who have had high blood sugar levels (hypoglycemia) in childhood may be at higher risk for developing the disease later.\n\n2. **Physical Symptoms**: Common physical symptoms include weight loss, increased thirst, frequent urination, fatigue, and poor appetite. These symptoms often start gradually over time.\n\n3. **Diagnosis by Blood Tests**: The most common test to diagnose type 2 diabetes is a fasting plasma glucose level test. If",
+        "generated_tokens": 128,
+        "latency_seconds": 3.135,
+        "tokens_per_second": 40.83,
+        "repetition_ratio": 0.0208,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers (NSBs) are a class of medications that include beta-adrenergic agonists and beta-adrenergic antagonists. They are commonly used to treat heart disease by reducing the heart rate and blood pressure. However, they can also have significant effects on breathing and airway function.\n\nWhen used as part of a treatment plan for asthma, NSBs may cause side effects such as bronchoconstriction, which can lead to difficulty breathing and airway inflammation. This is because these drugs block the receptors that normally stimulate the release of bronchial secretions, leading to increased mucus production and constr",
+        "generated_tokens": 128,
+        "latency_seconds": 2.681,
+        "tokens_per_second": 47.74,
+        "repetition_ratio": 0.0105,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "Essential hypertension is a condition that requires specific medications to manage. The primary first-line pharmacological drugs classes recommended for managing essential hypertension include:\n\n1. Angiotensin II Receptor Blockers (ARBs): These drugs block angiotensin II receptors in the body, which helps reduce blood pressure and prevent the formation of blood vessels.\n\n2. Diuretics: These drugs help remove excess fluid from the body, reducing blood pressure and preventing kidney damage.\n\n3. Beta-blockers: These drugs block beta-receptors in the heart, helping to lower blood pressure and reduce the risk of heart disease.\n\n4. Calcium channel blockers:",
+        "generated_tokens": 128,
+        "latency_seconds": 2.661,
+        "tokens_per_second": 48.11,
+        "repetition_ratio": 0.0426,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RCL) refers to a decrease in the amount of drugs that are filtered out and eliminated from the body's kidneys. This can lead to altered dosing strategies for medications that are primarily excreted by the kidneys.\n\nWhen drugs are primarily excreted by the kidneys, they are not fully cleared from the body's system. As a result, the drug concentration in the blood is lower than it would be if the drug were completely excreted through the kidneys. This means that the dose required to achieve the same level of effect as when the drug was taken orally or injected into the bloodstream is less than what",
+        "generated_tokens": 128,
+        "latency_seconds": 2.696,
+        "tokens_per_second": 47.48,
+        "repetition_ratio": 0.055,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized tool used to assess the severity of a patient's state of consciousness. The three main behavioral response components that can be observed during the GCS assessment are:\n\n1. Motor response: This refers to the ability of the patient to move their body parts and initiate movement from lying down or sitting up.\n\n2. Speech response: The ability of the patient to communicate verbally through speech sounds or words.\n\n3. Behavioural response: The overall behavior of the patient, including physical movements, verbal communication, and any other observable behaviors.\n\nThese three components collectively provide a comprehensive view of a patient's",
+        "generated_tokens": 128,
+        "latency_seconds": 2.666,
+        "tokens_per_second": 48.02,
+        "repetition_ratio": 0.066,
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "variant_id": "scale_estimation/int4_sym_g128_scale_est",
+    "device": "CPU",
+    "model_dir": "models/openvino/scale_estimation/int4_sym_g128_scale_est",
+    "xml_size_mb": 2.07,
+    "bin_size_mb": 306.44,
+    "total_size_mb": 308.51,
+    "compression_ratio": 3.06,
+    "size_reduction_pct": 67.3,
+    "compile_time_seconds": 1.62,
+    "avg_latency_seconds": 2.855,
+    "avg_tokens_per_second": 45.05,
+    "avg_repetition_ratio": 0.0172,
+    "prompts": [
+      {
+        "prompt_id": "val_med_01",
+        "domain": "Endocrinology",
+        "generated_text": "Type 2 diabetes mellitus is a chronic condition characterized by high blood sugar levels over time. The main symptoms and diagnostic indicators include:\n\n1. **Increased Blood Sugar Levels**: One of the most common early symptoms of type 2 diabetes is increased blood sugar levels. This can be detected through fasting blood tests or by measuring your blood glucose level at regular intervals.\n\n2. **Weight Gain**: People with type 2 diabetes often gain weight due to their higher insulin requirements and less physical activity compared to non-diabetic individuals.\n\n3. **Fatigue**: A significant symptom of type 2 diabetes is fatigue, which can be mild to severe depending",
+        "generated_tokens": 128,
+        "latency_seconds": 3.255,
+        "tokens_per_second": 39.33,
+        "repetition_ratio": 0.0769,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_02",
+        "domain": "Cardiology / Pulmonology",
+        "generated_text": "Non-selective beta-blockers like metoprolol (a type of beta-blocker) can have significant side effects on the heart and respiratory system when used for a long time or in combination with other medications that may also affect them. Here's why these drugs should be used with extreme caution in patients with asthma:\n\n1. **Cardiovascular Effects**: Beta blockers such as metoprolol can cause vasodilation, which leads to increased blood flow to the skin and mucous membranes, potentially leading to hypotension (low blood pressure). This can lead to symptoms such as dizziness, palpitations, and fainting.",
+        "generated_tokens": 128,
+        "latency_seconds": 2.748,
+        "tokens_per_second": 46.58,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_03",
+        "domain": "Cardiovascular Therapeutics",
+        "generated_text": "The primary first-line pharmacological drugs classes recommended for managing essential hypertension include:\n\n1. **Angiotensin II Receptor Blockers (ARBs)**: These medications help reduce blood pressure by blocking the action of angiotensin II.\n2. **Diuretics**: These drugs increase urination to remove excess fluid from the body and lower blood pressure.\n3. **Beta-blockers**: These drugs help relax the muscles in the heart and lungs, which can also be beneficial for lowering blood pressure.\n4. **Cyclopentanepiperazine (CP)**: This is a type of diuretic that has been",
+        "generated_tokens": 128,
+        "latency_seconds": 2.676,
+        "tokens_per_second": 47.83,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_04",
+        "domain": "Nephrology / Pharmacokinetics",
+        "generated_text": "Reduced renal clearance (RRC) refers to a decrease in the amount of drugs that can be eliminated from the body through the kidneys. This is often due to conditions like chronic kidney disease or certain types of cancer treatments that affect the kidneys.\n\nThe dosing strategy for medications with reduced RRC typically involves adjusting the dose based on the patient's condition and the specific medication being used. Here\u2019s how it might work:\n\n1. **Assessment**: The healthcare provider will assess the patient's overall health status, including their ability to metabolize medications effectively. They may also consider other factors such as age, weight, and any underlying diseases that",
+        "generated_tokens": 128,
+        "latency_seconds": 2.784,
+        "tokens_per_second": 45.98,
+        "repetition_ratio": 0.0093,
+        "status": "PASS"
+      },
+      {
+        "prompt_id": "val_med_05",
+        "domain": "Emergency Medicine / Trauma",
+        "generated_text": "The Glasgow Coma Scale (GCS) is a standardized instrument used to assess the severity of a patient's condition by evaluating their level of consciousness and awareness. The three main components that are evaluated include:\n\n1. **Confusion**: This refers to the inability to understand or respond to stimuli. A patient who is confused may not be aware of time, place, and other important details.\n\n2. **Disorientation**: This involves confusion about time, place, direction, and orientation. For example, someone who has been away for several days might become disoriented when they return home.\n\n3. **Impaired awareness**: This describes the loss",
+        "generated_tokens": 128,
+        "latency_seconds": 2.812,
+        "tokens_per_second": 45.52,
+        "repetition_ratio": 0.0,
+        "status": "PASS"
+      }
+    ]
+  }
+]

@@ -1,0 +1,221 @@
+# OpenVINO NNCF Post-Training Quantization Experiment Manifest
+# Project: Architecture-Aware Optimization of an Offline Medical Question-Answering System
+# Model: Qwen/Qwen2.5-0.5B-Instruct
+
+metadata:
+  project: "Architecture-Aware Optimization of an Offline Medical Question-Answering System"
+  base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+  architecture: "Qwen2ForCausalLM"
+  nncf_version: "3.4.0"
+  openvino_version: "2026.4.1"
+  calibration_dataset: "data/calibration/medical_calibration_data.json"
+  seed: 42
+
+experiments:
+  # ----------------------------------------------------
+  # Baselines (Uncompressed OpenVINO IR)
+  # ----------------------------------------------------
+  - id: fp32
+    precision: FP32
+    mode: none
+    group_size: null
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/fp32"
+    description: "Full precision FP32 OpenVINO IR baseline"
+
+  - id: fp16
+    precision: FP16
+    mode: none
+    group_size: null
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/fp16"
+    description: "Half precision FP16 OpenVINO IR reference baseline"
+
+  # ----------------------------------------------------
+  # INT8 Asymmetric Weight Compression
+  # ----------------------------------------------------
+  - id: int8_asym
+    precision: INT8
+    mode: int8_asym
+    group_size: null
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int8_asym"
+    description: "INT8 asymmetric per-channel weight compression"
+
+  # ----------------------------------------------------
+  # INT4 Symmetric Group-Size Sweep
+  # ----------------------------------------------------
+  - id: int4_sym_g32
+    precision: INT4
+    mode: int4_sym
+    group_size: 32
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_sym/g32"
+    description: "INT4 symmetric weight compression with group size 32"
+
+  - id: int4_sym_g64
+    precision: INT4
+    mode: int4_sym
+    group_size: 64
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_sym/g64"
+    description: "INT4 symmetric weight compression with group size 64"
+
+  - id: int4_sym_g128
+    precision: INT4
+    mode: int4_sym
+    group_size: 128
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_sym/g128"
+    description: "INT4 symmetric weight compression with standard group size 128"
+
+  - id: int4_sym_g256
+    precision: INT4
+    mode: int4_sym
+    group_size: 256
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_sym/g256"
+    description: "INT4 symmetric weight compression with group size 256"
+
+  # ----------------------------------------------------
+  # INT4 Asymmetric Group-Size Sweep
+  # ----------------------------------------------------
+  - id: int4_asym_g32
+    precision: INT4
+    mode: int4_asym
+    group_size: 32
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_asym/g32"
+    description: "INT4 asymmetric weight compression with group size 32"
+
+  - id: int4_asym_g64
+    precision: INT4
+    mode: int4_asym
+    group_size: 64
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_asym/g64"
+    description: "INT4 asymmetric weight compression with group size 64"
+
+  - id: int4_asym_g128
+    precision: INT4
+    mode: int4_asym
+    group_size: 128
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_asym/g128"
+    description: "INT4 asymmetric weight compression with group size 128"
+
+  - id: int4_asym_g256
+    precision: INT4
+    mode: int4_asym
+    group_size: 256
+    ratio: 1.0
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/int4_asym/g256"
+    description: "INT4 asymmetric weight compression with group size 256"
+
+  # ----------------------------------------------------
+  # Ratio Sweep (Mixed Precision)
+  # ----------------------------------------------------
+  - id: int4_sym_g128_r0.8
+    precision: INT4
+    mode: int4_sym
+    group_size: 128
+    ratio: 0.8
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/ratio_experiments/int4_sym_g128_r0.8"
+    description: "INT4 symmetric with ratio 0.8 (80% INT4, 20% INT8_ASYM backup precision)"
+
+  - id: int4_sym_g128_r0.5
+    precision: INT4
+    mode: int4_sym
+    group_size: 128
+    ratio: 0.5
+    awq: false
+    scale_estimation: false
+    dataset_required: false
+    output_dir: "models/openvino/ratio_experiments/int4_sym_g128_r0.5"
+    description: "INT4 symmetric with ratio 0.5 (50% INT4, 50% INT8_ASYM backup precision)"
+
+  # ----------------------------------------------------
+  # AWQ (Activation-Aware Weight Quantization) Variants
+  # ----------------------------------------------------
+  - id: int4_sym_g128_awq
+    precision: INT4
+    mode: int4_sym
+    group_size: 128
+    ratio: 1.0
+    awq: true
+    scale_estimation: false
+    dataset_required: true
+    output_dir: "models/openvino/awq/int4_sym_g128_awq"
+    description: "INT4 symmetric with AWQ outlier protection using medical calibration corpus"
+
+  - id: int4_asym_g128_awq
+    precision: INT4
+    mode: int4_asym
+    group_size: 128
+    ratio: 1.0
+    awq: true
+    scale_estimation: false
+    dataset_required: true
+    output_dir: "models/openvino/awq/int4_asym_g128_awq"
+    description: "INT4 asymmetric with AWQ outlier protection using medical calibration corpus"
+
+  # ----------------------------------------------------
+  # Scale Estimation Variants
+  # ----------------------------------------------------
+  - id: int4_sym_g128_scale_est
+    precision: INT4
+    mode: int4_sym
+    group_size: 128
+    ratio: 1.0
+    awq: false
+    scale_estimation: true
+    dataset_required: true
+    output_dir: "models/openvino/scale_estimation/int4_sym_g128_scale_est"
+    description: "INT4 symmetric with optimization-based scale estimation on medical calibration corpus"
+
+  - id: int4_asym_g128_scale_est
+    precision: INT4
+    mode: int4_asym
+    group_size: 128
+    ratio: 1.0
+    awq: false
+    scale_estimation: true
+    dataset_required: true
+    output_dir: "models/openvino/scale_estimation/int4_asym_g128_scale_est"
+    description: "INT4 asymmetric with optimization-based scale estimation on medical calibration corpus"

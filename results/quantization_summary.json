@@ -1,0 +1,16 @@
+[
+  {
+    "id": "int4_asym_g256",
+    "status": "SUCCESS",
+    "mode": "int4_asym",
+    "group_size": 256,
+    "ratio": 1.0,
+    "awq": false,
+    "scale_estimation": false,
+    "compression_time_seconds": 6.0,
+    "xml_size_mb": 2.32,
+    "bin_size_mb": 306.8,
+    "total_size_mb": 309.12,
+    "output_dir": "models/openvino/int4_asym/g256"
+  }
+]
