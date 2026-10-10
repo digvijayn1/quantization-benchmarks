@@ -1,0 +1,127 @@
+{
+  "hardware_specification": {
+    "cpu_model": "AMD Ryzen 7 8845HS",
+    "cores": 8,
+    "threads": 16,
+    "max_boost_clock_ghz": 5.1,
+    "peak_fp32_tflops": 1.3056,
+    "peak_fp32_gflops": 1305.6,
+    "peak_int8_gops": 2611.2,
+    "peak_memory_bandwidth_gb_s": 89.6,
+    "effective_memory_bandwidth_gb_s": 55.0,
+    "machine_balance_flop_per_byte": 14.57
+  },
+  "model_parameters_count": 494032768,
+  "gflops_per_token_decode": 0.9881,
+  "machine_balance": 14.57,
+  "precision_analytical_profiles": {
+    "fp32": {
+      "bytes_per_param": 4.0,
+      "arithmetic_intensity_decode": 0.5
+    },
+    "fp16": {
+      "bytes_per_param": 2.0,
+      "arithmetic_intensity_decode": 1.0
+    },
+    "int8_asym": {
+      "bytes_per_param": 1.0,
+      "arithmetic_intensity_decode": 2.0
+    },
+    "int4_sym_g128": {
+      "bytes_per_param": 0.5,
+      "arithmetic_intensity_decode": 4.0
+    },
+    "int4_asym_g128": {
+      "bytes_per_param": 0.5,
+      "arithmetic_intensity_decode": 4.0
+    },
+    "int4_sym_g128_awq": {
+      "bytes_per_param": 0.5,
+      "arithmetic_intensity_decode": 4.0
+    },
+    "int4_sym_g128_scale_est": {
+      "bytes_per_param": 0.5,
+      "arithmetic_intensity_decode": 4.0
+    }
+  },
+  "empirical_attained_performance": [
+    {
+      "model_id": "fp32",
+      "precision": "FP32",
+      "arithmetic_intensity_flops_per_byte": 0.5,
+      "throughput_tok_s": 18.924,
+      "attained_gflops": 18.698,
+      "attained_bandwidth_gb_s": 37.4,
+      "theoretical_ceiling_gflops": 44.8,
+      "bandwidth_utilization_pct": 41.74,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "fp16",
+      "precision": "FP16",
+      "arithmetic_intensity_flops_per_byte": 1.0,
+      "throughput_tok_s": 18.852,
+      "attained_gflops": 18.627,
+      "attained_bandwidth_gb_s": 18.63,
+      "theoretical_ceiling_gflops": 89.6,
+      "bandwidth_utilization_pct": 20.79,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "int8_asym",
+      "precision": "INT8",
+      "arithmetic_intensity_flops_per_byte": 2.0,
+      "throughput_tok_s": 31.74,
+      "attained_gflops": 31.361,
+      "attained_bandwidth_gb_s": 15.68,
+      "theoretical_ceiling_gflops": 179.2,
+      "bandwidth_utilization_pct": 17.5,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "int4_sym_g128",
+      "precision": "INT4",
+      "arithmetic_intensity_flops_per_byte": 4.0,
+      "throughput_tok_s": 44.97,
+      "attained_gflops": 44.433,
+      "attained_bandwidth_gb_s": 11.11,
+      "theoretical_ceiling_gflops": 358.4,
+      "bandwidth_utilization_pct": 12.4,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "int4_asym_g128",
+      "precision": "INT4",
+      "arithmetic_intensity_flops_per_byte": 4.0,
+      "throughput_tok_s": 41.036,
+      "attained_gflops": 40.546,
+      "attained_bandwidth_gb_s": 10.14,
+      "theoretical_ceiling_gflops": 358.4,
+      "bandwidth_utilization_pct": 11.32,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "int4_sym_g128_awq",
+      "precision": "INT4_AWQ",
+      "arithmetic_intensity_flops_per_byte": 4.0,
+      "throughput_tok_s": 41.724,
+      "attained_gflops": 41.226,
+      "attained_bandwidth_gb_s": 10.31,
+      "theoretical_ceiling_gflops": 358.4,
+      "bandwidth_utilization_pct": 11.51,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    },
+    {
+      "model_id": "int4_sym_g128_scale_est",
+      "precision": "INT4_SCALE_EST",
+      "arithmetic_intensity_flops_per_byte": 4.0,
+      "throughput_tok_s": 42.912,
+      "attained_gflops": 42.4,
+      "attained_bandwidth_gb_s": 10.6,
+      "theoretical_ceiling_gflops": 358.4,
+      "bandwidth_utilization_pct": 11.83,
+      "regime": "Memory-Bandwidth Bound (I < Machine Balance)"
+    }
+  ],
+  "analytical_conclusion": "Because the arithmetic intensity during autoregressive token generation (0.5 to 4.0 FLOP/Byte) is strictly below the CPU machine balance (14.57 FLOP/Byte), the workload operates in the memory-bound slanted ceiling of the Roofline model. Quantization to INT8 and INT4 reduces bytes fetched per token by 2x-4x, proportionally relaxing memory bandwidth saturation and yielding measured speedups."
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-07 12:44:25",
+  "indexes": [
+    {
+      "variant": "fp32",
+      "index_type": "IndexFlatIP",
+      "vector_dimension": 384,
+      "number_of_vectors": 5987,
+      "index_file_size_mb": 8.77,
+      "metadata_file_size_mb": 4.62,
+      "index_build_time_seconds": 0.003,
+      "reload_success": true,
+      "retrieval_consistency": "CONSISTENT",
+      "index_path": "indexes/faiss/fp32/index.faiss",
+      "metadata_path": "indexes/faiss/fp32/metadata.json"
+    },
+    {
+      "variant": "int8_embedding",
+      "index_type": "IndexFlatIP",
+      "vector_dimension": 384,
+      "number_of_vectors": 5987,
+      "index_file_size_mb": 8.77,
+      "metadata_file_size_mb": 4.62,
+      "index_build_time_seconds": 0.0038,
+      "reload_success": true,
+      "retrieval_consistency": "CONSISTENT",
+      "index_path": "indexes/faiss/int8_embedding/index.faiss",
+      "metadata_path": "indexes/faiss/int8_embedding/metadata.json"
+    }
+  ]
+}

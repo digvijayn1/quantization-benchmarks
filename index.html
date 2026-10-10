@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architecture-Aware Quantization | Medical QA System</title>
+  <title>Architecture-Aware Optimization | Offline Medical QA Research Dashboard</title>
   
   <!-- Modern Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,353 +16,1192 @@
   <!-- Styles -->
   <link rel="stylesheet" href="ui/style.css">
 </head>
-<body>
+<body class="dark-theme">
 
-  <!-- Top Navigation Header -->
-  <header>
-    <div class="brand">
-      <div class="brand-icon">⚡</div>
-      <div class="brand-text">
-        <h1>Architecture-Aware Quantization</h1>
-        <p>Offline Medical Question-Answering System &bull; OpenVINO 2026.4.1 &bull; NNCF 3.4.0</p>
+  <!-- Top Research Disclaimer -->
+  <div class="research-disclaimer-banner">
+    <div>
+      <strong>RESEARCH PROTOTYPE:</strong> For research & educational evaluation only. This offline system is not a substitute for professional clinical advice.
+    </div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span class="badge-pill badge-gray">OpenVINO 2026.4.1</span>
+      <span class="badge-pill badge-gray">NNCF 3.4.0</span>
+      <span class="badge-pill badge-cyan">AMD Zen 4 AVX-512</span>
+    </div>
+  </div>
+
+  <!-- Main Research Header -->
+  <header class="research-header">
+    <div class="brand-container">
+      <div class="brand-badge">⚡</div>
+      <div class="brand-info">
+        <h1>Architecture-Aware Optimization</h1>
+        <div class="brand-sub">
+          <span>Offline Medical QA System</span> &bull; 
+          <span class="tech-pill">OpenVINO</span>
+          <span class="tech-pill">NNCF</span>
+          <span class="tech-pill">FAISS</span>
+          <span class="tech-pill">RAG</span>
+          <span class="tech-pill">AVX-512</span>
+        </div>
       </div>
     </div>
-    
-    <nav class="nav-tabs">
-      <button class="nav-tab active" data-tab="tab-overview">📊 Executive Overview</button>
-      <button class="nav-tab" data-tab="tab-matrix">📋 Benchmark Matrix</button>
-      <button class="nav-tab" data-tab="tab-prompts">🩺 Clinical QA Inspector</button>
-      <button class="nav-tab" data-tab="tab-architecture">🔬 Architectural Insights</button>
-      <button class="nav-tab" data-tab="tab-hardware">💻 Hardware & Environment</button>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+      <button class="nav-item active" data-tab="tab-overview">📊 Overview</button>
+      <button class="nav-item" data-tab="tab-pipeline">🔄 Pipeline</button>
+      <button class="nav-item" data-tab="tab-models">🧩 Models</button>
+      <button class="nav-item" data-tab="tab-retrieval">🔍 Retrieval</button>
+      <button class="nav-item" data-tab="tab-benchmarks">⏱️ Benchmarks</button>
+      <button class="nav-item" data-tab="tab-scaling">🧵 Scaling</button>
+      <button class="nav-item" data-tab="tab-pareto">🎯 Pareto</button>
+      <button class="nav-item" data-tab="tab-roofline">📐 Roofline</button>
+      <button class="nav-item" data-tab="tab-eval">🩺 Evaluation</button>
+      <button class="nav-item" data-tab="tab-experiments">📋 Experiments</button>
+      <button class="nav-item" data-tab="tab-work">🚀 Research Work</button>
+      <button class="nav-item" data-tab="tab-architecture">🔬 Architecture</button>
+      <button class="nav-item" data-tab="tab-gallery">🖼️ Gallery</button>
     </nav>
-    
-    <div class="header-actions">
-      <button class="btn-present" id="btn-enter-presentation">
+
+    <!-- Header Controls -->
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-toggle-theme" title="Toggle Light/Dark Theme">🌓</button>
+      <button class="btn-present-mode" id="btn-enter-presentation">
         <span>📽️</span>
-        <span>Presentation Mode</span>
+        <span>Presentation</span>
       </button>
     </div>
   </header>
 
-  <!-- Main Content Body -->
-  <main>
+  <!-- Main Dashboard Container -->
+  <main class="dashboard-container">
 
-    <!-- TAB 1: EXECUTIVE OVERVIEW -->
-    <section id="tab-overview" class="tab-content active">
-      <div class="hero">
-        <div class="hero-tag">✨ Empirical Research Synthesis</div>
-        <h2>Offline Medical QA Optimization on <span class="gradient-text">Qwen2.5-0.5B-Instruct</span></h2>
-        <p class="lead">
-          Comprehensive post-training quantization study comparing 17 configurations across uniform INT8, group-size sweeps ($g \in \{32, 64, 128, 256\}$), mixed-precision ratio sweeps, and data-aware AWQ / Scale Estimation on AMD Zen 4 AVX-512 hardware.
+    <!-- ================================================================= -->
+    <!-- 1. OVERVIEW PAGE                                                  -->
+    <!-- ================================================================= -->
+    <section id="tab-overview" class="page-section active">
+      
+      <!-- Hero Section -->
+      <div class="hero-card">
+        <div class="hero-tag">✨ M.Tech Research Project &bull; Empirical Systems Evaluation</div>
+        <h2>Architecture-Aware Optimization of an Offline Medical Question-Answering System</h2>
+        <div class="text-cyan font-mono" style="font-size:0.9rem; margin-bottom:0.75rem;">
+          Offline RAG + OpenVINO + Post-Training Quantization + CPU-Aware Inference Optimization
+        </div>
+        <p class="hero-desc">
+          An offline medical question-answering system combining retrieval-augmented generation, OpenVINO model optimization, embedding compression, FAISS retrieval, and architecture-aware CPU benchmarking.
         </p>
-        <div class="hero-badges">
-          <span class="badge-item">Base Model: <strong>Qwen/Qwen2.5-0.5B-Instruct</strong></span>
-          <span class="badge-item">Parameters: <strong>494,032,768 (~494M)</strong></span>
-          <span class="badge-item">Target Processor: <strong>AMD Ryzen 7 8845HS (16 Threads, AVX-512)</strong></span>
-          <span class="badge-item">Discrete GPU: <strong>NVIDIA RTX 4060 Laptop (8GB)</strong></span>
-          <span class="badge-item">Quantization Engine: <strong>Intel OpenVINO 2026.4.1 + NNCF 3.4.0</strong></span>
+
+        <!-- System Status Bar -->
+        <div class="system-status-bar">
+          <div class="status-pill success"><span class="dot"></span> Corpus: <strong>Processed (1,064 docs)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> Embeddings: <strong>Generated (5,987 chunks)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> FAISS: <strong>Indexed (IndexFlatIP)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> OpenVINO: <strong>Converted (FP32/FP16)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> Quantization: <strong>Completed (17 variants)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> Evaluation: <strong>Completed (MedQA & PubMedQA)</strong></div>
+          <div class="status-pill success"><span class="dot"></span> Benchmarking: <strong>Completed (74 runs)</strong></div>
         </div>
       </div>
 
-      <!-- KPI Metric Cards -->
+      <!-- Key Metrics Cards (Clickable) -->
       <div class="kpi-grid">
-        <div class="kpi-card cyan">
-          <div class="kpi-icon">🚀</div>
-          <div class="kpi-title">Pareto Champion Speed</div>
-          <div class="kpi-value text-cyan">47.10 tok/s</div>
-          <div class="kpi-meta"><span class="highlight">+132% speedup</span> vs FP32 Baseline (20.29 tok/s)</div>
+        <div class="kpi-card" data-nav="tab-models">
+          <div class="kpi-header">
+            <span class="kpi-title">Base LLM</span>
+            <span class="kpi-icon">🧠</span>
+          </div>
+          <div class="kpi-value text-cyan">Qwen2.5</div>
+          <div class="kpi-meta">494M parameters (0.5B-Instruct)</div>
         </div>
 
-        <div class="kpi-card emerald">
-          <div class="kpi-icon">💾</div>
-          <div class="kpi-title">Model Size Reduction</div>
-          <div class="kpi-value text-emerald">308.51 MB</div>
-          <div class="kpi-meta"><span class="highlight">3.06x Compression</span> vs FP32 (944.08 MB)</div>
+        <div class="kpi-card" data-nav="tab-models">
+          <div class="kpi-header">
+            <span class="kpi-title">Model Variants</span>
+            <span class="kpi-icon">🧩</span>
+          </div>
+          <div class="kpi-value text-emerald">17</div>
+          <div class="kpi-meta">INT8, INT4, AWQ, Scale Est, Mixed</div>
         </div>
 
-        <div class="kpi-card purple">
-          <div class="kpi-icon">⏱️</div>
-          <div class="kpi-title">Average Prompt Latency</div>
-          <div class="kpi-value text-purple">2.73s</div>
-          <div class="kpi-meta">Vs. 6.33s for FP32 across 128 generated tokens</div>
+        <div class="kpi-card" data-nav="tab-pipeline">
+          <div class="kpi-header">
+            <span class="kpi-title">Corpus Documents</span>
+            <span class="kpi-icon">📚</span>
+          </div>
+          <div class="kpi-value text-purple">1,064</div>
+          <div class="kpi-meta">Biomedical & Clinical QA abstracts</div>
         </div>
 
-        <div class="kpi-card amber">
-          <div class="kpi-icon">🩺</div>
-          <div class="kpi-title">Clinical Accuracy & Coherence</div>
-          <div class="kpi-value">100% PASS</div>
-          <div class="kpi-meta">5/5 Medical Domains validated with rep ratio &le; 0.039</div>
+        <div class="kpi-card" data-nav="tab-retrieval">
+          <div class="kpi-header">
+            <span class="kpi-title">FAISS Vectors</span>
+            <span class="kpi-icon">🔍</span>
+          </div>
+          <div class="kpi-value text-cyan">5,987</div>
+          <div class="kpi-meta">384-dim BGE dense embeddings</div>
+        </div>
+
+        <div class="kpi-card" data-nav="tab-eval">
+          <div class="kpi-header">
+            <span class="kpi-title">PubMedQA Accuracy</span>
+            <span class="kpi-icon">🩺</span>
+          </div>
+          <div class="kpi-value text-emerald">36.84%</div>
+          <div class="kpi-meta">Parsed Accuracy (Matches FP32)</div>
+        </div>
+
+        <div class="kpi-card" data-nav="tab-benchmarks">
+          <div class="kpi-header">
+            <span class="kpi-title">Best Measured Latency</span>
+            <span class="kpi-icon">⚡</span>
+          </div>
+          <div class="kpi-value text-purple">1,445 ms</div>
+          <div class="kpi-meta">44.97 tok/s (3.39x vs FP32 T1)</div>
+        </div>
+
+        <div class="kpi-card" data-nav="tab-models">
+          <div class="kpi-header">
+            <span class="kpi-title">Smallest Model</span>
+            <span class="kpi-icon">💾</span>
+          </div>
+          <div class="kpi-value text-amber">305.8 MB</div>
+          <div class="kpi-meta">3.09x compression vs FP32 (944 MB)</div>
+        </div>
+
+        <div class="kpi-card" data-nav="tab-retrieval">
+          <div class="kpi-header">
+            <span class="kpi-title">Retrieval Overhead</span>
+            <span class="kpi-icon">⏱️</span>
+          </div>
+          <div class="kpi-value text-cyan">7.03 ms</div>
+          <div class="kpi-meta">&lt;0.35% of total end-to-end time</div>
         </div>
       </div>
 
-      <!-- Interactive Charts -->
-      <div class="charts-grid">
+      <!-- Quick Summary Charts -->
+      <div class="charts-grid-2x2">
         <div class="chart-card">
-          <div class="chart-header">
-            <div class="chart-title">
-              <h3>Pareto Frontier: Model Size vs. Latency</h3>
-              <p>Top-left quadrant represents the optimal tradeoff</p>
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Pareto Frontier (Model Size vs. Generation Latency)</h3>
+              <p>Top-left quadrant represents optimal tradeoff</p>
             </div>
+            <button class="pill-btn active" data-nav="tab-pareto">Full Explorer &rarr;</button>
           </div>
-          <div class="chart-container">
-            <canvas id="paretoChart"></canvas>
+          <div class="chart-container-wrap">
+            <canvas id="overviewParetoChart"></canvas>
           </div>
         </div>
 
         <div class="chart-card">
-          <div class="chart-header">
-            <div class="chart-title">
-              <h3>Generation Throughput (Tokens / Sec)</h3>
-              <p>Ranked generation speed across all 17 model variants</p>
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Generation Throughput by Quantization Recipe</h3>
+              <p>Tokens / Second on AMD Zen 4 (8 physical cores)</p>
             </div>
+            <button class="pill-btn active" data-nav="tab-models">All Models &rarr;</button>
           </div>
-          <div class="chart-container">
-            <canvas id="throughputChart"></canvas>
+          <div class="chart-container-wrap">
+            <canvas id="overviewThroughputChart"></canvas>
           </div>
         </div>
 
         <div class="chart-card">
-          <div class="chart-header">
-            <div class="chart-title">
-              <h3>Group-Size Scaling Dynamics ($g \in \{32, 64, 128, 256\}$)</h3>
-              <p>Symmetric vs. Asymmetric generation speed comparison</p>
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Thread Scaling & Speedup (1 to 16 Threads)</h3>
+              <p>Scaling vs. Single-Thread FP32 Baseline (4,900 ms)</p>
             </div>
+            <button class="pill-btn active" data-nav="tab-scaling">Scaling Analysis &rarr;</button>
           </div>
-          <div class="chart-container">
-            <canvas id="groupSweepChart"></canvas>
+          <div class="chart-container-wrap">
+            <canvas id="overviewScalingChart"></canvas>
           </div>
         </div>
 
         <div class="chart-card">
-          <div class="chart-header">
-            <div class="chart-title">
-              <h3>Storage & Memory Footprint Breakdown</h3>
-              <p>Weights (.bin) vs. Graph Topology (.xml) in Megabytes</p>
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Memory Footprint & Peak Resident Set Size (RSS)</h3>
+              <p>Process Working Set in Megabytes across Models</p>
+            </div>
+            <button class="pill-btn active" data-nav="tab-benchmarks">Resource Stats &rarr;</button>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="overviewMemoryChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. PIPELINE INTERACTIVE PAGE                                      -->
+    <!-- ================================================================= -->
+    <section id="tab-pipeline" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Interactive System Pipeline</h2>
+          <p>End-to-end dataflow of the offline medical question-answering architecture from raw corpus ingestion to hardware-aware inference.</p>
+        </div>
+        <div class="section-actions">
+          <button class="btn-present-mode" id="btn-run-pipeline-demo">
+            <span>▶</span>
+            <span>Run Pipeline Demonstration</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pipeline-container">
+        <div class="pipeline-flow" id="pipeline-flow-bar">
+          <!-- 12 Pipeline Stages Generated Dynamically -->
+        </div>
+
+        <!-- Selected Stage Detail Box -->
+        <div class="pipeline-stage-detail" id="pipeline-stage-detail">
+          <div>
+            <div class="badge-pill badge-cyan" id="stage-detail-tag">STAGE 01</div>
+            <h3 id="stage-detail-title" style="margin: 6px 0; font-size:1.2rem;">Medical Corpus Ingestion</h3>
+            <p id="stage-detail-desc" style="color:var(--text-secondary); font-size:0.85rem; line-height:1.5; margin-bottom:1rem;"></p>
+            <div class="detail-specs" id="stage-detail-specs">
+              <!-- Dynamically populated -->
             </div>
           </div>
-          <div class="chart-container">
-            <canvas id="footprintChart"></canvas>
+          <div style="background:var(--bg-elevated); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border-subtle);">
+            <h4 style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px;">Artifacts & Code</h4>
+            <div id="stage-detail-files" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--cyan-light); line-height:1.6;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Execution Animation Modal / Banner -->
+      <div id="pipeline-demo-output" style="display:none; background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.25rem; margin-top:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <h4 style="color:var(--cyan-light); font-size:0.9rem;">🔄 Pipeline Execution Trace (Demonstration)</h4>
+          <span class="badge-pill badge-amber">Demonstration Mode</span>
+        </div>
+        <div id="demo-trace-log" style="font-family:var(--font-mono); font-size:0.8rem; background:var(--bg-surface); padding:1rem; border-radius:var(--radius-sm); max-height:220px; overflow-y:auto; line-height:1.6;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. MODELS COMPARISON PAGE                                         -->
+    <!-- ================================================================= -->
+    <section id="tab-models" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Quantized Model Variants & Comparison</h2>
+          <p>Complete post-training quantization exploration comparing 17 configurations across FP32/FP16 baselines, uniform INT8, INT4 group sweeps, mixed-precision, AWQ, and Scale Estimation.</p>
+        </div>
+      </div>
+
+      <!-- Comparison Selector Bar -->
+      <div class="table-card" style="margin-bottom:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h4 style="font-size:0.85rem; color:var(--text-primary);">Select Models to Compare Side-by-Side:</h4>
+            <p style="font-size:0.72rem; color:var(--text-muted);">Check 2 or more models to generate comparison charts</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="pill-btn" id="btn-select-all-models">Select All</button>
+            <button class="pill-btn" id="btn-select-key-models">Key Highlights</button>
+            <button class="pill-btn" id="btn-clear-models">Clear</button>
+          </div>
+        </div>
+        <div id="model-checkbox-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:6px;">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Dynamic Side-by-Side Comparison Charts -->
+      <div class="charts-grid-2x2" id="model-comparison-charts-area">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Storage Footprint (MB)</h3>
+              <p>Weights (.bin) + Graph Topology (.xml)</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="modelCompareSizeChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Inference Throughput (Tokens / Sec)</h3>
+              <p>Measured generation throughput on Zen 4 CPU</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="modelCompareThroughputChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Generation Latency (Seconds per 128 Tokens)</h3>
+              <p>Greedy sampling across medical validation suite</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="modelCompareLatencyChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Repetition Ratio & Safety Audit</h3>
+              <p>3-gram repetition frequency (Lower is safer)</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="modelCompareRepetitionChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master Models Table -->
+      <div class="table-card">
+        <div class="table-controls">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="models-table-search" placeholder="Search variant or category...">
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Filter:</span>
+            <button class="pill-btn active" data-modelfilter="all">All (17)</button>
+            <button class="pill-btn" data-modelfilter="Baselines">Baselines</button>
+            <button class="pill-btn" data-modelfilter="INT8 Asymmetric">INT8</button>
+            <button class="pill-btn" data-modelfilter="INT4 Symmetric">INT4 Symmetric</button>
+            <button class="pill-btn" data-modelfilter="INT4 Asymmetric">INT4 Asymmetric</button>
+            <button class="pill-btn" data-modelfilter="Data-Aware (AWQ)">AWQ</button>
+            <button class="pill-btn" data-modelfilter="Data-Aware (Scale Est)">Scale Est</button>
+            <button class="pill-btn" data-modelfilter="Mixed Precision">Mixed</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table" id="models-full-table">
+            <thead>
+              <tr>
+                <th data-sort="variant_id">Model Variant ↕</th>
+                <th>Category</th>
+                <th data-sort="total_size_mb">Total Size ↕</th>
+                <th data-sort="compression_ratio">Compression ↕</th>
+                <th data-sort="avg_latency_seconds">Latency (s) ↕</th>
+                <th data-sort="avg_tokens_per_second">Throughput (tok/s) ↕</th>
+                <th data-sort="avg_repetition_ratio">Repetition Ratio ↕</th>
+                <th>Validation</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="models-table-body">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. RETRIEVAL & QA INSPECTOR PAGE                                 -->
+    <!-- ================================================================= -->
+    <section id="tab-retrieval" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Dense Vector Retrieval & Clinical QA Explorer</h2>
+          <p>FAISS dense retrieval with INT8 compressed BGE embeddings over 5,987 medical corpus chunks paired with offline quantized LLM generation.</p>
+        </div>
+        <div class="section-actions">
+          <span class="badge-pill badge-emerald">● Experiment Results</span>
+        </div>
+      </div>
+
+      <!-- Retrieval Metrics Summary -->
+      <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Query Embedding</span><span class="kpi-icon">📐</span></div>
+          <div class="kpi-value text-cyan">5.67 ms</div>
+          <div class="kpi-meta">BGE-small-en-v1.5 INT8</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">FAISS Search</span><span class="kpi-icon">⚡</span></div>
+          <div class="kpi-value text-emerald">0.86 ms</div>
+          <div class="kpi-meta">IndexFlatIP Top-5 search</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Embedding Size</span><span class="kpi-icon">💾</span></div>
+          <div class="kpi-value text-purple">22.09 MB</div>
+          <div class="kpi-meta">3.90x compression vs FP32 (86 MB)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Cosine Fidelity</span><span class="kpi-icon">🎯</span></div>
+          <div class="kpi-value text-cyan">1.000000</div>
+          <div class="kpi-meta">96.6% Top-5 retrieval overlap</div>
+        </div>
+      </div>
+
+      <!-- QA Inspector & Comparison Area -->
+      <div class="qa-inspector-grid">
+        <div class="prompt-list-sidebar">
+          <h4 style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px;">Medical Prompts</h4>
+          <div id="qa-prompt-list">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+
+        <div class="qa-display-area">
+          <!-- Active Prompt Box -->
+          <div class="qa-prompt-box">
+            <div class="qa-prompt-header">
+              <h4 id="qa-active-domain">Cardiovascular Therapeutics</h4>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span class="badge-pill badge-cyan" id="qa-active-id">val_med_03</span>
+                <span class="badge-pill badge-gray">Greedy (temp=0.0)</span>
+              </div>
+            </div>
+            <div class="qa-prompt-question" id="qa-active-question"></div>
+          </div>
+
+          <!-- Retrieved Context Chunks -->
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <h4 style="font-size:0.82rem; text-transform:uppercase; color:var(--text-muted);">Top-k Retrieved Clinical Context (FAISS IndexFlatIP):</h4>
+              <div class="filter-group">
+                <span class="filter-label">Top-k:</span>
+                <button class="pill-btn" data-topk="1">1</button>
+                <button class="pill-btn" data-topk="3">3</button>
+                <button class="pill-btn active" data-topk="5">5</button>
+              </div>
+            </div>
+            <div class="qa-context-chunks" id="qa-retrieved-chunks">
+              <!-- Populated by app.js -->
+            </div>
+          </div>
+
+          <!-- Model Output Generation Comparison -->
+          <div>
+            <h4 style="font-size:0.82rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">Model-Generated Answers Across Precisions:</h4>
+            <div class="qa-responses-grid">
+              
+              <!-- FP32 -->
+              <div class="response-card">
+                <div class="response-card-header">
+                  <div>
+                    <strong style="font-size:0.85rem;">FP32 Baseline</strong>
+                    <span class="badge-pill badge-gray" style="margin-left:4px;">944 MB</span>
+                  </div>
+                  <span class="badge-pill badge-gray" id="qa-resp-fp32-meta">20.29 tok/s | 6.33s</span>
+                </div>
+                <div class="response-text" id="qa-resp-fp32-text"></div>
+              </div>
+
+              <!-- INT8 -->
+              <div class="response-card">
+                <div class="response-card-header">
+                  <div>
+                    <strong style="font-size:0.85rem;">INT8 Asymmetric</strong>
+                    <span class="badge-pill badge-emerald" style="margin-left:4px;">474 MB</span>
+                  </div>
+                  <span class="badge-pill badge-emerald" id="qa-resp-int8-meta">35.22 tok/s | 3.64s</span>
+                </div>
+                <div class="response-text" id="qa-resp-int8-text"></div>
+              </div>
+
+              <!-- INT4 AWQ Champion -->
+              <div class="response-card champion">
+                <div class="response-card-header">
+                  <div>
+                    <strong class="text-cyan" style="font-size:0.85rem;">AWQ INT4-SYM (Champion)</strong>
+                    <span class="badge-pill badge-cyan" style="margin-left:4px;">308 MB</span>
+                  </div>
+                  <span class="badge-pill badge-cyan" id="qa-resp-awq-meta">47.10 tok/s | 2.73s</span>
+                </div>
+                <div class="response-text" id="qa-resp-awq-text"></div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 2: FULL BENCHMARK MATRIX -->
-    <section id="tab-matrix" class="tab-content">
-      <div class="table-card">
-        <div class="table-controls">
-          <div class="search-box">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="table-search" placeholder="Search variant name or category...">
+    <!-- ================================================================= -->
+    <!-- 5. BENCHMARKS & LATENCY PAGE                                      -->
+    <!-- ================================================================= -->
+    <section id="tab-benchmarks" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Performance Benchmarking & Latency Breakdown</h2>
+          <p>Empirical latency measurements isolating Time-To-First-Token (TTFT), Time-Per-Output-Token (TPOT), and End-to-End inference under reproducible laboratory conditions.</p>
+        </div>
+        <div class="section-actions">
+          <button class="pill-btn" id="btn-export-benchmarks-csv">📥 Download Benchmarks CSV</button>
+        </div>
+      </div>
+
+      <!-- Latency Metric Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Average TTFT (Prefill)</span><span class="kpi-icon">⚡</span></div>
+          <div class="kpi-value text-cyan">1.47 ms</div>
+          <div class="kpi-meta">Across short prompt workloads</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Best TPOT (INT4)</span><span class="kpi-icon">⏱️</span></div>
+          <div class="kpi-value text-emerald">22.56 ms</div>
+          <div class="kpi-meta">44.97 tok/s (vs 76.54 ms for FP32)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Speedup vs FP32 T1</span><span class="kpi-icon">🚀</span></div>
+          <div class="kpi-value text-purple">3.39x</div>
+          <div class="kpi-meta">1,445 ms vs 4,900 ms baseline</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Peak Memory Working Set</span><span class="kpi-icon">💾</span></div>
+          <div class="kpi-value text-amber">2,322 MB</div>
+          <div class="kpi-meta">INT8 Single-Thread configuration</div>
+        </div>
+      </div>
+
+      <!-- Latency Breakdown & Comparisons -->
+      <div class="charts-grid-2x2">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Time-Per-Output-Token (TPOT) by Model Variant</h3>
+              <p>Autoregressive decode latency in milliseconds/token (Lower is Better)</p>
+            </div>
           </div>
-          <div class="filter-pills">
-            <button class="pill-btn active" data-filter="all">All (17)</button>
-            <button class="pill-btn" data-filter="Baselines">Baselines</button>
-            <button class="pill-btn" data-filter="INT8 Asymmetric">INT8</button>
-            <button class="pill-btn" data-filter="INT4 Symmetric">INT4 Symmetric</button>
-            <button class="pill-btn" data-filter="INT4 Asymmetric">INT4 Asymmetric</button>
-            <button class="pill-btn" data-filter="Mixed Precision">Mixed Precision</button>
-            <button class="pill-btn" data-filter="Data-Aware (AWQ)">AWQ</button>
-            <button class="pill-btn" data-filter="Data-Aware (Scale Est)">Scale Estimation</button>
+          <div class="chart-container-wrap">
+            <canvas id="benchTpotChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Time-To-First-Token (TTFT) Prefill Ingestion</h3>
+              <p>Prompt ingestion latency across precision formats</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="benchTtftChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>End-to-End Latency Stacked Breakdown</h3>
+              <p>Retrieval (FAISS) + TTFT + Autoregressive Token Generation</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="benchStackedLatencyChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Peak RSS Memory Footprint (MB)</h3>
+              <p>Process working set across execution profiles</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="benchRssChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. THREAD SCALING & FACTORIAL MATRIX                             -->
+    <!-- ================================================================= -->
+    <section id="tab-scaling" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Multi-Thread Scaling & Parallel Efficiency</h2>
+          <p>Rigorous factorial scaling study across 5 thread counts ($T \in \{1, 2, 4, 8, 16\}$) and 2 CPU affinity modes (Default vs Core-Pinned).</p>
+        </div>
+      </div>
+
+      <!-- Interactive Scaling Controls -->
+      <div class="table-card" style="margin-bottom:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div class="filter-group">
+            <span class="filter-label">Model Target:</span>
+            <button class="pill-btn active" data-scalingmodel="int4_sym_g128">INT4 Symmetric</button>
+            <button class="pill-btn" data-scalingmodel="int8_asym">INT8 Asymmetric</button>
+            <button class="pill-btn" data-scalingmodel="fp32">FP32 Baseline</button>
+            <button class="pill-btn" data-scalingmodel="int4_sym_g128_awq">AWQ INT4</button>
+            <button class="pill-btn" data-scalingmodel="all">Compare All</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">CPU Affinity:</span>
+            <button class="pill-btn active" data-scalingpin="all">All Modes</button>
+            <button class="pill-btn" data-scalingpin="Pinned">Core-Pinned</button>
+            <button class="pill-btn" data-scalingpin="Default">Default OS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scaling Charts -->
+      <div class="charts-grid-3col">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Latency vs. Threads (ms)</h3>
+              <p>Inference time across physical and SMT cores</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="scalingLatencyChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Speedup vs. Single-Thread FP32</h3>
+              <p>Baseline: FP32 T=1 Default (4,900.5 ms)</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="scalingSpeedupChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Parallel Efficiency $E(T) = S(T)/T$</h3>
+              <p>Hardware compute efficiency percentage</p>
+            </div>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="scalingEfficiencyChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Factorial Heatmap Matrix -->
+      <div class="table-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h3 style="font-size:1rem;">Factorial Execution Matrix Heatmap</h3>
+            <p style="font-size:0.75rem; color:var(--text-muted);">Interactive cell inspection across precision formats and thread counts</p>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Metric:</span>
+            <button class="pill-btn active" data-heatmetric="latency">Latency (ms)</button>
+            <button class="pill-btn" data-heatmetric="speedup">Speedup (x)</button>
+            <button class="pill-btn" data-heatmetric="tpot">TPOT (ms/tok)</button>
+            <button class="pill-btn" data-heatmetric="rss">Peak RSS (MB)</button>
+            <button class="pill-btn" data-heatmetric="cpu">CPU Util (%)</button>
+          </div>
+        </div>
+        <div class="heatmap-container" id="scaling-heatmap-area">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. PARETO FRONTIER EXPLORER                                       -->
+    <!-- ================================================================= -->
+    <section id="tab-pareto" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Multi-Objective Pareto Frontier Explorer</h2>
+          <p>Identify non-dominated deployment configurations balancing model compression, generation throughput, memory footprint, and clinical accuracy.</p>
+        </div>
+      </div>
+
+      <!-- Pareto Axis Selector Controls -->
+      <div class="table-card" style="margin-bottom:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div class="filter-group">
+            <span class="filter-label">X-Axis Metric:</span>
+            <button class="pill-btn active" data-paretox="size">Model Size (MB)</button>
+            <button class="pill-btn" data-paretox="latency">Latency (Seconds)</button>
+            <button class="pill-btn" data-paretox="rss">Peak RSS (MB)</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Y-Axis Metric:</span>
+            <button class="pill-btn active" data-paretoy="throughput">Throughput (tok/s)</button>
+            <button class="pill-btn" data-paretoy="latency">Latency (Seconds)</button>
+            <button class="pill-btn" data-paretoy="compression">Compression Ratio</button>
+            <button class="pill-btn" data-paretoy="accuracy">Accuracy (%)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pareto Chart & Insights Grid -->
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.25rem; margin-bottom:1.5rem;">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3 id="pareto-chart-title">Pareto Optimal Frontier</h3>
+              <p>Highlighted points represent non-dominated configurations</p>
+            </div>
+          </div>
+          <div class="chart-container-tall">
+            <canvas id="interactiveParetoChart"></canvas>
+          </div>
+        </div>
+
+        <div class="table-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="font-size:1rem; margin-bottom:0.5rem;">Pareto Champions</h3>
+            <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:1rem;">Top non-dominated deployment profiles:</p>
+            
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="spec-item" style="border-left:3px solid var(--cyan-light);">
+                <div class="spec-label">Ultra-High Throughput Champion</div>
+                <div class="spec-value text-cyan">awq/int4_sym_g128_awq</div>
+                <div style="font-size:0.72rem; color:var(--text-muted);">47.10 tok/s &bull; 308.5 MB &bull; 2.73s latency</div>
+              </div>
+
+              <div class="spec-item" style="border-left:3px solid var(--emerald-light);">
+                <div class="spec-label">Maximum Compression Champion</div>
+                <div class="spec-value text-emerald">int4_sym/g256 (Adjusted)</div>
+                <div style="font-size:0.72rem; color:var(--text-muted);">3.09x compression &bull; 305.8 MB &bull; 46.61 tok/s</div>
+              </div>
+
+              <div class="spec-item" style="border-left:3px solid var(--purple-light);">
+                <div class="spec-label">Edge Memory Floor Champion</div>
+                <div class="spec-value text-purple">int8_asym (T=1)</div>
+                <div style="font-size:0.72rem; color:var(--text-muted);">2,322 MB RSS &bull; 474.7 MB size &bull; 35.22 tok/s</div>
+              </div>
+
+              <div class="spec-item" style="border-left:3px solid var(--amber-light);">
+                <div class="spec-label">Exact Precision Baseline</div>
+                <div class="spec-value text-amber">fp32 Baseline</div>
+                <div style="font-size:0.72rem; color:var(--text-muted);">1.00x baseline &bull; 944.1 MB &bull; 20.29 tok/s</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-elevated); padding:0.75rem; border-radius:var(--radius-sm); margin-top:1rem; border:1px solid var(--border-subtle);">
+            <div style="font-size:0.72rem; color:var(--text-muted);">
+              <strong>Mathematical Rule:</strong> Configuration $A$ dominates $B$ if $A$ is strictly better in at least one objective and no worse in all other objectives.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 8. ROOFLINE & PERFORMANCE MODELLING                              -->
+    <!-- ================================================================= -->
+    <section id="tab-roofline" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Roofline Performance Model & Arithmetic Intensity</h2>
+          <p>Analytical and empirical roofline model demonstrating memory-bandwidth saturation during autoregressive LLM decoding on AMD Zen 4 hardware.</p>
+        </div>
+      </div>
+
+      <!-- Roofline Parameters Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Peak Memory Bandwidth</span><span class="kpi-icon">💾</span></div>
+          <div class="kpi-value text-cyan">89.6 GB/s</div>
+          <div class="kpi-meta">Dual-Channel DDR5-5600</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Peak Compute (AVX-512)</span><span class="kpi-icon">⚡</span></div>
+          <div class="kpi-value text-purple">1,305.6 GFLOP/s</div>
+          <div class="kpi-meta">8 Cores &bull; 5.1 GHz Boost</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Machine Balance ($B$)</span><span class="kpi-icon">⚖️</span></div>
+          <div class="kpi-value text-amber">14.57 FLOP/Byte</div>
+          <div class="kpi-meta">Boundary to compute-bound zone</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Decoding Intensity ($I$)</span><span class="kpi-icon">🎯</span></div>
+          <div class="kpi-value text-emerald">0.5 – 4.0</div>
+          <div class="kpi-meta">Strictly Memory-Bandwidth Bound</div>
+        </div>
+      </div>
+
+      <!-- Roofline Visualizer & Explanatory Panel -->
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.25rem; margin-bottom:1.5rem;">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-area">
+              <h3>Hardware Roofline Model (Log-Log Scale)</h3>
+              <p>Arithmetic Intensity (FLOP/Byte) vs. Attainable Performance (GFLOP/s)</p>
+            </div>
+          </div>
+          <div class="chart-container-tall">
+            <canvas id="rooflineChart"></canvas>
+          </div>
+        </div>
+
+        <div class="table-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="font-size:1rem; margin-bottom:0.75rem;">Theoretical vs Empirical Analysis</h3>
+            
+            <div style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5; display:flex; flex-direction:column; gap:10px;">
+              <p>
+                <strong>1. The Memory Wall:</strong> During token generation (batch size = 1), the arithmetic intensity is constrained by weight reading:
+                $$\text{Intensity} = \frac{2 \times N_{\text{params}}}{\text{Bytes Read}}$$
+              </p>
+              <p>
+                <strong>2. Why INT4 Accelerates CPU Generation:</strong> On Zen 4 AVX-512, INT4 reduces weight traffic from $4.0\text{ Bytes/param}$ (FP32) to $0.625\text{ Bytes/param}$ (INT4), tripling maximum attainable throughput from $22.7\text{ tok/s}$ to $145.7\text{ tok/s}$.
+              </p>
+              <p>
+                <strong>3. Prefill vs. Decode Divergence:</strong> Prefill processes full prompt sequences in parallel ($I \gg 14.57\text{ FLOP/Byte}$), entering compute saturation, while autoregressive decoding is strictly memory-bound.
+              </p>
+            </div>
+          </div>
+
+          <div class="spec-item" style="margin-top:1rem;">
+            <div class="spec-label">Research Takeaway</div>
+            <div style="font-size:0.75rem; color:var(--cyan-light); font-weight:600;">
+              Weight quantization directly solves the memory-bandwidth bottleneck, yielding a 3.39x throughput speedup without architectural compute changes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 9. EVALUATION & ACCURACY PAGE                                     -->
+    <!-- ================================================================= -->
+    <section id="tab-eval" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Clinical Benchmark Evaluation (PubMedQA & MedQA)</h2>
+          <p>Quantitative validation on standardized clinical question-answering benchmarks with deterministic answer extraction and Wilson 95% confidence intervals.</p>
+        </div>
+      </div>
+
+      <!-- Evaluation KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">PubMedQA Parsed Acc</span><span class="kpi-icon">🩺</span></div>
+          <div class="kpi-value text-emerald">36.84%</div>
+          <div class="kpi-meta">7 / 19 parsed questions correct</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">PubMedQA Raw Acc</span><span class="kpi-icon">📋</span></div>
+          <div class="kpi-value text-cyan">28.00%</div>
+          <div class="kpi-meta">7 / 25 total evaluated subset</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">95% Wilson CI</span><span class="kpi-icon">📊</span></div>
+          <div class="kpi-value text-purple">[14.3%, 47.6%]</div>
+          <div class="kpi-meta">Statistically identical to FP32</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span class="kpi-title">Parse Success Rate</span><span class="kpi-icon">🎯</span></div>
+          <div class="kpi-value text-amber">76.00%</div>
+          <div class="kpi-meta">19 / 25 structured answers parsed</div>
+        </div>
+      </div>
+
+      <!-- Answer Extraction Sample Explorer -->
+      <div class="table-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h3 style="font-size:1rem;">PubMedQA Answer Extraction & Gold Comparison Inspector</h3>
+            <p style="font-size:0.75rem; color:var(--text-muted);">Real benchmark question samples with model generation and rule-based extraction</p>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Filter:</span>
+            <button class="pill-btn active" data-evalfilter="all">All (25)</button>
+            <button class="pill-btn" data-evalfilter="CORRECT">Correct (7)</button>
+            <button class="pill-btn" data-evalfilter="GENERATION_FAILURE">Incorrect (12)</button>
+            <button class="pill-btn" data-evalfilter="UNPARSED">Unparsed (6)</button>
           </div>
         </div>
 
         <div class="table-responsive">
-          <table class="data-table">
+          <table class="data-table" id="eval-samples-table">
             <thead>
               <tr>
-                <th data-col="variant_id">Model Variant ↕</th>
-                <th>Category</th>
-                <th data-col="total_size_mb">Total Size ↕</th>
-                <th data-col="compression_ratio">Ratio ↕</th>
-                <th data-col="size_reduction_pct">Reduction ↕</th>
-                <th data-col="avg_latency_seconds">Avg Latency ↕</th>
-                <th data-col="avg_tokens_per_second">Throughput (tok/s) ↕</th>
-                <th data-col="avg_repetition_ratio">Repetition Ratio ↕</th>
+                <th>Question ID</th>
+                <th>Clinical Question</th>
+                <th>Gold Answer</th>
+                <th>Model Prediction</th>
+                <th>Extracted Rule</th>
+                <th>Status</th>
+                <th>Latencies</th>
+              </tr>
+            </thead>
+            <tbody id="eval-samples-table-body">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 10. EXPERIMENTS MASTER TABLE                                      -->
+    <!-- ================================================================= -->
+    <section id="tab-experiments" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Master Factorial Experiment Log (74 Runs)</h2>
+          <p>Comprehensive tabular view of all 74 factorial benchmarking runs spanning model precision, core counts, pinning strategies, and workload regimes.</p>
+        </div>
+        <div class="section-actions">
+          <button class="pill-btn" id="btn-export-experiments-csv">📥 Download Factorial CSV</button>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-controls">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="experiments-search" placeholder="Search Experiment ID or Precision...">
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Threads:</span>
+            <button class="pill-btn active" data-expthreads="all">All</button>
+            <button class="pill-btn" data-expthreads="1">1</button>
+            <button class="pill-btn" data-expthreads="2">2</button>
+            <button class="pill-btn" data-expthreads="4">4</button>
+            <button class="pill-btn" data-expthreads="8">8</button>
+            <button class="pill-btn" data-expthreads="16">16</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Pinning:</span>
+            <button class="pill-btn active" data-exppin="all">All</button>
+            <button class="pill-btn" data-exppin="Pinned">Pinned</button>
+            <button class="pill-btn" data-exppin="Default">Default</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table" id="experiments-master-table">
+            <thead>
+              <tr>
+                <th data-expsort="experiment_id">Experiment ID ↕</th>
+                <th data-expsort="precision">Precision ↕</th>
+                <th data-expsort="threads">Threads ↕</th>
+                <th>Affinity</th>
+                <th data-expsort="ttft_ms">TTFT (ms) ↕</th>
+                <th data-expsort="tpot_ms">TPOT (ms/tok) ↕</th>
+                <th data-expsort="latency_ms">Latency (ms) ↕</th>
+                <th data-expsort="throughput_tps">Throughput (tok/s) ↕</th>
+                <th data-expsort="peak_rss_mb">Peak RSS (MB) ↕</th>
+                <th data-expsort="speedup">Speedup ↕</th>
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody id="benchmark-table-body">
-              <!-- Dynamically populated by app.js -->
+            <tbody id="experiments-table-body">
+              <!-- Populated by app.js -->
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
-    <!-- TAB 3: CLINICAL QA INSPECTOR -->
-    <section id="tab-prompts" class="tab-content">
-      <div class="prompt-inspector-grid">
-        <div class="prompt-sidebar">
-          <h3 style="font-family:var(--font-heading); font-size:1rem; margin-bottom:0.75rem; color:#fff;">Select Medical Evaluation Prompt:</h3>
-          <div id="prompt-selector-list">
-            <!-- Dynamically populated -->
+    <!-- ================================================================= -->
+    <!-- 11. RESEARCH WORK & "SHOW MY WORK"                                -->
+    <!-- ================================================================= -->
+    <section id="tab-work" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Research Journey & Work Completed</h2>
+          <p>Chronological documentation of research contributions, methodology engineering, implementation milestones, and verified artifacts.</p>
+        </div>
+      </div>
+
+      <div class="journey-timeline" id="journey-timeline-container">
+        <!-- 10 Research Milestones Populated by app.js -->
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 12. ARCHITECTURE & ENVIRONMENT                                    -->
+    <!-- ================================================================= -->
+    <section id="tab-architecture" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>System Architecture & Hardware Profile</h2>
+          <p>Technical architecture, OpenVINO IR graph execution, vector instruction set pathways, and reproducible runtime environment.</p>
+        </div>
+      </div>
+
+      <div class="charts-grid-2x2">
+        <div class="table-card">
+          <h3 style="font-size:1rem; margin-bottom:1rem; color:var(--cyan-light);">Host Compute & Runtime Profile</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Specification</th>
+                  <th>Optimization Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CPU Processor</strong></td>
+                  <td>AMD Ryzen 7 8845HS (8 Cores / 16 Threads)</td>
+                  <td>AVX-512, AVX2, FMA3 vector execution paths</td>
+                </tr>
+                <tr>
+                  <td><strong>Discrete GPU</strong></td>
+                  <td>NVIDIA GeForce RTX 4060 Laptop (8GB GDDR6)</td>
+                  <td>Target device <code>GPU.0</code> for comparison</td>
+                </tr>
+                <tr>
+                  <td><strong>System Memory</strong></td>
+                  <td>16.0 GB Total Physical RAM (~15.3 GB visible)</td>
+                  <td>Dual-Channel DDR5-5600 (89.6 GB/s bandwidth)</td>
+                </tr>
+                <tr>
+                  <td><strong>OpenVINO Runtime</strong></td>
+                  <td><code>2026.4.1-22982-e213a147257</code></td>
+                  <td>High-throughput Causal LM graph execution</td>
+                </tr>
+                <tr>
+                  <td><strong>NNCF Framework</strong></td>
+                  <td>Intel NNCF <code>3.4.0</code></td>
+                  <td>Data-aware AWQ, Scale Est & Weight Compression</td>
+                </tr>
+                <tr>
+                  <td><strong>Operating System</strong></td>
+                  <td>Microsoft Windows 11 Home (Build 10.0.26200)</td>
+                  <td>Native Python 3.14.5 isolated environment</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <div class="prompt-comparison-view">
-          <div class="prompt-box">
-            <div class="prompt-box-header">
-              <span class="prompt-box-title" id="inspector-prompt-title">val_med_01: Endocrinology</span>
-              <span class="tag-badge cyan">128 max new tokens &bull; Greedy (temp=0.0)</span>
-            </div>
-            <p id="inspector-prompt-text" style="color:#fff; font-size:0.92rem; font-style:italic; line-height:1.4;"></p>
-          </div>
-
-          <div class="comparison-cards-grid">
-            <!-- Card 1: FP32 Baseline -->
-            <div class="response-card">
-              <div class="response-card-header">
-                <div>
-                  <strong style="color:#fff; font-size:0.9rem;">FP32 Uncompressed</strong>
-                  <span class="tag-badge gray" style="margin-left:4px;">944 MB</span>
-                </div>
-                <span class="tag-badge gray" id="resp-fp32-meta">20.29 tok/s | 6.33s</span>
+        <div class="table-card">
+          <h3 style="font-size:1rem; margin-bottom:1rem; color:var(--purple-light);">Architectural Optimization Insights</h3>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div class="spec-item">
+              <div class="spec-label">1. Symmetric vs. Asymmetric AVX-512 Kernels</div>
+              <div style="font-size:0.78rem; color:var(--text-secondary); margin-top:2px;">
+                Symmetric INT4 dequantization outpaced asymmetric INT4 by 4%–10% across all group sizes by eliminating runtime zero-point subtraction and register pressure.
               </div>
-              <div class="response-text" id="resp-fp32-text"></div>
             </div>
 
-            <!-- Card 2: INT8 Asymmetric -->
-            <div class="response-card">
-              <div class="response-card-header">
-                <div>
-                  <strong style="color:#fff; font-size:0.9rem;">INT8 Asymmetric</strong>
-                  <span class="tag-badge emerald" style="margin-left:4px;">474 MB</span>
-                </div>
-                <span class="tag-badge emerald" id="resp-int8-meta">35.22 tok/s | 3.64s</span>
+            <div class="spec-item">
+              <div class="spec-label">2. Hidden Dimension Divisibility ($d_{\text{model}} = 896$)</div>
+              <div style="font-size:0.78rem; color:var(--text-secondary); margin-top:2px;">
+                Qwen2.5-0.5B hidden dimension (896) divides evenly by 32, 64, and 128, but fails on 256 ($896 / 256 = 3.5$). Resolved via OpenVINO's <code>GroupSizeFallbackMode.ADJUST</code> fallback to $g=128$.
               </div>
-              <div class="response-text" id="resp-int8-text"></div>
             </div>
 
-            <!-- Card 3: AWQ INT4 Symmetric (Champion) -->
-            <div class="response-card champion">
-              <div class="response-card-header">
-                <div>
-                  <strong style="color:var(--cyan-light); font-size:0.9rem;">AWQ INT4-SYM (Champion)</strong>
-                  <span class="tag-badge cyan" style="margin-left:4px;">308 MB</span>
-                </div>
-                <span class="tag-badge cyan" id="resp-awq-meta">47.10 tok/s | 2.73s</span>
+            <div class="spec-item">
+              <div class="spec-label">3. AWQ Salient Weight Channel Protection</div>
+              <div style="font-size:0.78rem; color:var(--text-secondary); margin-top:2px;">
+                Protects the top 0.5% salient channels from clipping error based on activation magnitudes, yielding the highest throughput (47.10 tok/s) and lowest repetition ratio (0.0153).
               </div>
-              <div class="response-text" id="resp-awq-text"></div>
+            </div>
+
+            <div class="spec-item">
+              <div class="spec-label">4. BGE INT8 Sentence Embedding Compression</div>
+              <div style="font-size:0.78rem; color:var(--text-secondary); margin-top:2px;">
+                Compressed BGE dense retriever from 86.29 MB to 22.09 MB (3.90x reduction) with 1.000000 cosine fidelity and 96.6% Top-5 retrieval overlap.
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 4: ARCHITECTURAL INSIGHTS -->
-    <section id="tab-architecture" class="tab-content">
-      <div class="arch-grid">
-        <div class="arch-card">
-          <h4>⚡ Symmetric vs. Asymmetric Vector Kernels</h4>
-          <p>On Zen 4 / AVX-512, symmetric INT4 quantization outpaced asymmetric INT4 by 4%–10% in generation throughput across every group size. Symmetric dequantization eliminates runtime zero-point subtraction, significantly lowering register pressure.</p>
-          <div class="callout-box">Throughput: 45.93 tok/s (Symmetric) vs. 44.01 tok/s (Asymmetric) at g=128</div>
-        </div>
-
-        <div class="arch-card">
-          <h4>🧩 Hidden Dimension Divisibility ($d_{\text{model}} = 896$)</h4>
-          <p>Qwen2.5-0.5B's hidden dimension (896) is evenly divisible by 32 (28), 64 (14), and 128 (7), but fails on 256 ($896 / 256 = 3.5$). Self-attention projections required fallback to $g=128$, while MLP projections ($d_{\text{ffn}} = 4864$) scaled directly to $g=256$.</p>
-          <div class="callout-box">Resolved via OpenVINO's GroupSizeFallbackMode.ADJUST</div>
-        </div>
-
-        <div class="arch-card">
-          <h4>🎯 AWQ Salient Channel Weight Protection</h4>
-          <p>Standard PTQ minimizes tensor MSE uniformly. AWQ observes activation magnitudes on the 64-sample clinical calibration corpus, protecting the top 0.5% salient channels from clipping error and achieving the highest generation throughput (47.10 tok/s).</p>
-          <div class="callout-box">Fastest throughput with 0.015 repetition ratio</div>
-        </div>
-
-        <div class="arch-card">
-          <h4>🧠 Dynamic Dequantization (WNA16) vs W4A4</h4>
-          <p>Weights are compressed to 4-bit in memory and dequantized on-the-fly to FP16 in registers. Activations remain in FP16, capturing 70% bandwidth savings while eliminating activation outlier quantization collapse.</p>
-          <div class="callout-box">3.06x memory reduction with zero clinical quality loss</div>
+    <!-- ================================================================= -->
+    <!-- 13. PLOT GALLERY LIGHTBOX                                         -->
+    <!-- ================================================================= -->
+    <section id="tab-gallery" class="page-section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>High-Resolution Research Plot Gallery</h2>
+          <p>Explore all 12 publication-quality scientific plots generated during empirical evaluation with high-resolution lightbox inspection.</p>
         </div>
       </div>
-    </section>
 
-    <!-- TAB 5: HARDWARE & ENVIRONMENT PROFILE -->
-    <section id="tab-hardware" class="tab-content">
-      <div class="table-card">
-        <h3 style="font-family:var(--font-heading); color:#fff; margin-bottom:1rem;">Host Compute & Runtime Profile</h3>
-        <div class="table-responsive">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Subsystem / Framework</th>
-                <th>Specification</th>
-                <th>Optimization Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Processor (CPU)</strong></td>
-                <td>AMD Ryzen 7 8845HS w/ Radeon 780M (8 Cores / 16 Threads)</td>
-                <td>AVX-512, AVX2, FMA3 vector execution paths</td>
-              </tr>
-              <tr>
-                <td><strong>Discrete GPU (dGPU)</strong></td>
-                <td>NVIDIA GeForce RTX 4060 Laptop GPU (8GB GDDR6)</td>
-                <td>OpenVINO target device <code>GPU.0</code></td>
-              </tr>
-              <tr>
-                <td><strong>System Memory (RAM)</strong></td>
-                <td>16.0 GB Total Physical RAM (~15.3 GB visible)</td>
-                <td>All quantized models load in &lt;310 MB RAM</td>
-              </tr>
-              <tr>
-                <td><strong>OpenVINO Runtime</strong></td>
-                <td><code>2026.4.1-22982-e213a147257</code></td>
-                <td>High-throughput Causal LM graph execution</td>
-              </tr>
-              <tr>
-                <td><strong>Compression Engine</strong></td>
-                <td>Intel NNCF <code>3.4.0</code></td>
-                <td>Data-aware AWQ, Scale Est & Weight Compression</td>
-              </tr>
-              <tr>
-                <td><strong>Operating System</strong></td>
-                <td>Microsoft Windows 11 Home (Build 10.0.26200)</td>
-                <td>Native execution via isolated Python 3.14.5 environment</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="gallery-grid" id="gallery-grid-container">
+        <!-- 12 Plot Cards Populated by app.js -->
       </div>
     </section>
 
   </main>
 
-  <!-- Fullscreen Slide Deck Presentation Overlay -->
-  <div id="presentation-overlay" class="presentation-overlay">
-    <div class="slide-header">
-      <div class="brand">
-        <div class="brand-icon">⚡</div>
-        <div class="brand-text">
-          <h1 style="font-size:1.1rem; color:#fff;">Offline Medical QA Optimization</h1>
-          <p id="slide-counter" style="color:var(--cyan-light); font-weight:600;">Slide 1 of 4</p>
+  <!-- Plot Lightbox Modal -->
+  <div class="modal-overlay" id="gallery-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-plot-title" style="font-size:1.1rem; color:var(--text-primary);">Plot Title</h3>
+        <button class="btn-close-modal" id="btn-close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-plot-img" src="" alt="Research Plot" style="width:100%; max-height:600px; object-fit:contain; background:#000; border-radius:var(--radius-sm); margin-bottom:1rem;">
+        <p id="modal-plot-desc" style="color:var(--text-secondary); font-size:0.88rem; line-height:1.5; margin-bottom:0.5rem;"></p>
+        <div class="spec-item" style="border-left:3px solid var(--cyan-light);">
+          <div class="spec-label">Empirical Finding</div>
+          <div id="modal-plot-takeaway" style="font-size:0.82rem; color:var(--cyan-light); font-weight:600;"></div>
         </div>
-      </div>
-      <button class="slide-btn" id="btn-close-presentation">✕ Exit (ESC)</button>
-    </div>
-
-    <div class="slide-body">
-      <div class="hero-tag" id="slide-tag">Executive Summary</div>
-      <h2 id="slide-title" style="font-family:var(--font-heading); font-size:2.8rem; font-weight:800; color:#fff; margin-bottom:1rem;"></h2>
-      <p id="slide-lead" style="font-size:1.25rem; color:var(--text-secondary); max-width:1050px; line-height:1.5;"></p>
-      <div id="slide-dynamic-content"></div>
-    </div>
-
-    <div class="slide-footer">
-      <div style="font-size:0.85rem; color:var(--text-muted);">
-        Use <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; color:#fff;">&larr;</kbd> <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; color:#fff;">&rarr;</kbd> or Space to navigate slides
-      </div>
-      <div class="slide-nav-controls">
-        <button class="slide-btn" id="slide-prev">&larr; Previous</button>
-        <button class="slide-btn" id="slide-next">Next &rarr;</button>
       </div>
     </div>
   </div>
 
-  <!-- Data Bundle & Scripts -->
+  <!-- Fullscreen Slide Deck Presentation Mode -->
+  <div class="presentation-deck" id="presentation-deck">
+    <div class="slide-top-bar">
+      <div class="brand-container">
+        <div class="brand-badge">⚡</div>
+        <div class="brand-info">
+          <h1 style="font-size:1rem; color:#fff;">Offline Medical QA Optimization</h1>
+          <div style="font-size:0.7rem; color:var(--text-muted);">M.Tech Research Viva Presentation Mode</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span id="slide-number-indicator" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--cyan-light); font-weight:700;">Slide 1 of 6</span>
+        <button class="btn-icon" id="btn-exit-presentation" title="Exit (ESC)" style="color:#fff;">✕</button>
+      </div>
+    </div>
+
+    <div class="slide-center-content">
+      <div class="hero-tag" id="deck-slide-tag">Executive Summary</div>
+      <h2 id="deck-slide-title" style="font-size:2.4rem; font-weight:800; margin-bottom:0.75rem; line-height:1.2;"></h2>
+      <p id="deck-slide-lead" style="font-size:1.15rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1.5rem; max-width:1050px;"></p>
+      <div id="deck-slide-body"></div>
+    </div>
+
+    <div class="slide-bottom-bar">
+      <div style="font-size:0.75rem; color:var(--text-muted);">
+        Use <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:3px; color:#fff;">&larr;</kbd> <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:3px; color:#fff;">&rarr;</kbd> or Space to switch slides &bull; <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:3px; color:#fff;">ESC</kbd> to exit
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button class="pill-btn" id="btn-slide-prev">&larr; Previous</button>
+        <button class="btn-present-mode" id="btn-slide-next">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Footer -->
+  <footer class="research-footer">
+    <p><strong>Architecture-Aware Optimization of an Offline Medical Question-Answering System</strong></p>
+    <p>M.Tech Computer Science & Engineering Research Project &bull; OpenVINO 2026.4.1 &bull; NNCF 3.4.0</p>
+    <p style="margin-top:6px; font-size:0.75rem; color:var(--text-muted);">
+      For research and educational purposes only. Not a substitute for professional medical advice.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
   <script src="ui/data.js"></script>
   <script src="ui/app.js"></script>
 </body>

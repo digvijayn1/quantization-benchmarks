@@ -1,0 +1,72 @@
+# Factorial Performance Benchmarking Experiments Manifest
+# Project: Architecture-Aware Optimization of an Offline Medical Question-Answering System
+
+metadata:
+  version: "1.0.0"
+  target_hardware: "AMD Ryzen 7 8845HS (8C/16T, AVX-512)"
+  openvino_version: "2026.4.1"
+  baseline_experiment: "fp32_threads_1_pinning_false"
+  warmup_runs: 1
+  measurement_runs: 2
+  seed: 42
+
+models:
+  - id: "fp32"
+    path: "models/openvino/fp32"
+    precision: "FP32"
+    size_mb: 944.08
+  - id: "fp16"
+    path: "models/openvino/fp16"
+    precision: "FP16"
+    size_mb: 944.12
+  - id: "int8_asym"
+    path: "models/openvino/int8_asym"
+    precision: "INT8"
+    size_mb: 474.74
+  - id: "int4_sym_g128"
+    path: "models/openvino/int4_sym/g128"
+    precision: "INT4"
+    size_mb: 308.51
+  - id: "int4_asym_g128"
+    path: "models/openvino/int4_asym/g128"
+    precision: "INT4"
+    size_mb: 309.84
+  - id: "int4_sym_g128_awq"
+    path: "models/openvino/awq/int4_sym_g128_awq"
+    precision: "INT4_AWQ"
+    size_mb: 308.51
+  - id: "int4_sym_g128_scale_est"
+    path: "models/openvino/scale_estimation/int4_sym_g128_scale_est"
+    precision: "INT4_SCALE_EST"
+    size_mb: 308.51
+
+threads: [1, 2, 4, 8, 16]
+
+pinning_modes:
+  - id: "pinning_false"
+    enable_cpu_pinning: false
+    description: "Default OS thread scheduler assignment"
+  - id: "pinning_true"
+    enable_cpu_pinning: true
+    description: "Explicit OpenVINO core-binding / pinning"
+
+workload_profiles:
+  short:
+    max_new_tokens: 32
+    description: "Short clinical triage answer"
+  medium:
+    max_new_tokens: 64
+    description: "Standard medical QA explanation"
+  long:
+    max_new_tokens: 128
+    description: "Detailed differential diagnostic synthesis"
+
+retrieval_configuration:
+  index_path: "indexes/faiss/fp32"
+  embedding_precision: "fp32"
+  top_k: 5
+
+generation_parameters:
+  temperature: 0.0
+  do_sample: false
+  max_context_budget_tokens: 1536

@@ -1,0 +1,29 @@
+{
+  "dataset": "PubMedQA-pqa_labeled",
+  "qa_model": "models/openvino/awq/int4_sym_g128_awq",
+  "embedding_precision": "fp32",
+  "top_k": 5,
+  "total_questions": 25,
+  "parsed_questions": 18,
+  "unparsed_questions": 7,
+  "correct_answers": 6,
+  "raw_accuracy_pct": 24.0,
+  "parsed_accuracy_pct": 33.33,
+  "parse_rate_pct": 72.0,
+  "confidence_interval_95_pct": [
+    11.5,
+    43.43
+  ],
+  "latency_stats": {
+    "avg_retrieval_latency_ms": 21.73,
+    "p50_retrieval_latency_ms": 10.51,
+    "p95_retrieval_latency_ms": 33.64,
+    "avg_generation_latency_ms": 1787.76
+  },
+  "failure_distribution": {
+    "CORRECT": 6,
+    "GENERATION_FAILURE": 12,
+    "RETRIEVAL_FAILURE": 0,
+    "UNPARSED": 7
+  }
+}

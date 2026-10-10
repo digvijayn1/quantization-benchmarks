@@ -1,0 +1,63 @@
+# Retrieval Experiments Definition
+# Project: Architecture-Aware Optimization of an Offline Medical Question-Answering System
+
+metadata:
+  version: "1.0.0"
+  author: "Senior Software Engineer"
+  seed: 42
+
+embedding_experiments:
+  - id: "embed_fp32"
+    precision: "fp32"
+    model_dir: "models/embeddings/fp32"
+    dimension: 384
+    batch_size: 32
+    normalize: true
+
+  - id: "embed_int8"
+    precision: "int8"
+    model_dir: "models/embeddings/int8"
+    dimension: 384
+    batch_size: 32
+    normalize: true
+
+retrieval_experiments:
+  - id: "retrieval_fp32_k5"
+    embedding_variant: "embed_fp32"
+    index_path: "indexes/faiss/fp32"
+    top_k: 5
+
+  - id: "retrieval_int8_k5"
+    embedding_variant: "embed_int8"
+    index_path: "indexes/faiss/int8_embedding"
+    top_k: 5
+
+evaluation_experiments:
+  - id: "eval_medqa_fp32_retrieval"
+    dataset: "medqa"
+    embedding_precision: "fp32"
+    top_k: 5
+    qa_model: "models/openvino/awq/int4_sym_g128_awq"
+
+  - id: "eval_medqa_int8_retrieval"
+    dataset: "medqa"
+    embedding_precision: "int8"
+    top_k: 5
+    qa_model: "models/openvino/awq/int4_sym_g128_awq"
+
+  - id: "eval_pubmedqa_fp32_retrieval"
+    dataset: "pubmedqa"
+    embedding_precision: "fp32"
+    top_k: 5
+    qa_model: "models/openvino/awq/int4_sym_g128_awq"
+
+  - id: "eval_pubmedqa_int8_retrieval"
+    dataset: "pubmedqa"
+    embedding_precision: "int8"
+    top_k: 5
+    qa_model: "models/openvino/awq/int4_sym_g128_awq"
+
+latency_benchmarking:
+  warmup_queries: 10
+  timed_queries: 100
+  repetitions: 3

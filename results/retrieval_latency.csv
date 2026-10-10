@@ -1,0 +1,101 @@
+question_id,query,fp32_emb_ms,fp32_faiss_ms,fp32_total_ms,int8_emb_ms,int8_faiss_ms,int8_total_ms,overlap_at_k,top1_match
+medqa_test_1043,A 35-year-old woman presents to the office because she has felt a small painless,4.711,0.48,5.727,4.987,0.476,5.974,1.0,True
+medqa_test_0578,A 36-year-old woman comes to the physician because of difficulty discarding item,9.726,0.508,11.071,6.687,0.485,8.28,0.8,True
+medqa_test_0463,"A 65-year-old man, known to have chronic obstructive lung disease for the last 3",6.813,0.476,8.005,6.915,1.312,9.118,1.0,True
+medqa_test_1052,A 7-day-old infant boy presents to an emergency department due to poor feeding. ,6.62,0.6,8.168,5.132,0.476,6.389,1.0,True
+medqa_test_1082,An 81-year-old man patient recently moved into an assisted living facility and p,4.586,0.488,5.714,4.205,0.498,5.331,0.8,True
+medqa_test_0067,A 3-week-old male newborn is brought to the hospital because of poor weight gain,6.211,0.478,7.386,6.023,0.484,7.191,1.0,True
+medqa_test_1132,A 68-year-old woman presents with an intermittent throbbing headache with an ons,6.741,0.492,8.205,6.484,0.477,7.971,1.0,True
+medqa_test_0779,A 29-year-old man presents to the emergency department after a motor vehicle acc,4.816,0.481,5.968,4.316,0.48,5.407,1.0,True
+medqa_test_0762,A 57-year-old man presents to his primary care physician for follow-up of his di,4.86,0.691,6.292,4.224,1.382,6.127,1.0,True
+medqa_test_1215,A 58-year-old woman presents to the office for routine follow-up. She recently u,8.534,0.48,9.918,5.026,0.384,6.095,1.0,True
+medqa_test_0607,A group of researchers from Italy conducted a case register study that included ,8.134,0.573,9.441,12.516,0.49,14.168,1.0,True
+medqa_test_0576,A 32-year-old female is brought to the emergency room by her friend for acute on,7.929,0.481,9.395,7.848,0.472,9.239,1.0,True
+medqa_test_0183,A 35-year-old Caucasian female presents to the emergency room with unilateral le,8.865,0.762,10.276,8.166,0.453,9.317,1.0,True
+medqa_test_0727,"A 26-year-old man comes to the physician for episodic fever, recurrent night swe",7.527,0.478,8.635,7.791,0.603,9.012,1.0,True
+medqa_test_0812,A 45-year-old African-American woman comes to the physician after an episode of ,9.038,0.569,10.3,10.522,1.332,12.549,1.0,False
+medqa_test_0340,A 67-year-old man is brought to the physician because of increasing forgetfulnes,10.194,0.488,11.45,8.946,1.267,11.309,1.0,True
+medqa_test_0472,"A researcher is testing an unknown compound, X, and seeing the effect it has on ",7.576,0.657,8.943,5.731,0.564,6.868,0.8,True
+medqa_test_0419,A 78-year-old man is brought to the emergency department because of a 1-day hist,10.439,1.718,13.099,10.556,0.457,12.224,0.8,True
+medqa_test_1266,A 45-year-old male with a history of diabetes and poorly controlled hypertension,6.63,0.478,7.69,6.573,0.468,7.616,0.8,True
+medqa_test_0243, A 61-year-old man was started on rosuvastatin 40 mg 8 weeks ago and presents to,8.145,0.492,9.272,9.269,0.474,10.477,1.0,True
+medqa_test_1087,A 39-year-old man seeks an evaluation in the emergency room due to an episode of,7.274,0.54,8.452,9.66,1.766,12.193,1.0,False
+medqa_test_0454,A 42-year-old man presents to a neurologist for evaluation of severe headache. H,10.935,0.49,12.152,8.817,0.475,9.965,1.0,False
+medqa_test_0007,A 65-year-old man is brought to the emergency department 30 minutes after the on,10.368,0.499,11.674,8.451,0.563,9.927,1.0,True
+medqa_test_1061,"A 37-year-old woman presents to the emergency department with confusion, anxiety",7.975,0.49,9.199,8.566,0.449,9.727,1.0,True
+medqa_test_0062,A 23-year-old primigravida presents for a regular prenatal care visit at 16 week,6.231,0.482,7.387,5.047,0.454,6.145,0.8,True
+medqa_test_0636,A 2-day-old boy delivered at 34 weeks gestation is found to have a murmur on rou,5.918,0.49,6.899,6.415,0.504,7.427,1.0,True
+medqa_test_0102,The patient is given prophylactic labetalol and magnesium sulfate. Examination s,5.23,0.498,6.105,17.312,0.561,18.244,0.8,True
+medqa_test_0876,A 42-year-old woman with a history of depression and headaches presents to the e,6.663,0.506,7.746,7.836,0.456,8.858,1.0,True
+medqa_test_1151,A 1900-g (4-lb 3-oz) newborn is delivered at term to a 36-year-old primigravid w,7.086,0.481,8.176,9.229,0.578,10.57,1.0,True
+medqa_test_1243,A 26-year-old man presents to the office complaining of persistent epigastric pa,14.352,0.593,15.774,11.655,0.409,12.749,1.0,True
+medqa_test_0808,A 71-year-old woman presents to her physician accompanied by her son. She has no,6.965,0.411,8.643,8.276,0.468,10.007,1.0,True
+medqa_test_0212,In order to assess the feasibility and evaluate the outcomes of cerclage wiring ,9.023,0.488,10.289,10.996,0.494,12.24,1.0,True
+medqa_test_0940,A 66-year-old male with a history of myocardial infarction presents to your prim,6.095,0.476,7.164,5.968,0.455,6.919,1.0,True
+medqa_test_0644,An investigator is studying the effects of different gastrointestinal regulatory,6.11,0.501,7.217,6.368,0.594,7.416,1.0,True
+medqa_test_1056,A 29-year-old man diagnosed with schizophrenia 4 years ago presents for follow-u,6.285,0.507,7.35,6.305,0.461,7.312,1.0,True
+medqa_test_0774,A 25-year-old African American man presents to his primary care provider for rou,6.42,0.669,7.588,6.494,0.458,7.428,0.8,True
+medqa_test_0438,A 45-year-old man comes to his primary-care doctor with his wife for a 4-week hi,6.601,0.608,7.846,8.464,0.443,9.556,1.0,True
+medqa_test_0005,A 39-year-old man presents to the emergency department because of progressively ,7.277,0.491,8.646,8.903,0.49,9.917,1.0,True
+medqa_test_0678,A researcher is interested in identifying the most effective treatment for uncom,7.134,1.35,9.174,8.261,0.469,9.407,1.0,True
+medqa_test_0769,A 51-year-old man presents to his primary care provider for intermittent shaking,9.327,0.489,10.511,8.893,0.456,10.143,1.0,False
+medqa_test_0279,A 76-year-old man is brought to the physician by his wife because of low back pa,9.816,0.51,11.219,7.206,0.654,8.92,1.0,True
+medqa_test_0950,An investigator is studying cellular regeneration of epithelial cells. She has o,5.354,0.48,6.283,6.056,0.484,7.063,0.8,True
+medqa_test_0905,Background: There is a lack of consensus about whether the initial imaging metho,6.679,0.47,9.311,5.935,0.482,8.032,1.0,True
+medqa_test_1145,A 33-year-old woman at 17-weeks gestation comes to the physician for evaluation ,6.859,0.487,8.333,6.125,0.554,7.36,1.0,True
+medqa_test_0043,A healthy 23-year-old male is undergoing an exercise stress test as part of his ,6.953,1.078,8.623,7.72,0.477,8.646,1.0,True
+medqa_test_0650,A 51-year-old man presents the emergency room with chest pain. He mentions that ,11.196,1.974,13.884,8.008,0.471,9.342,1.0,True
+medqa_test_0101,A 65-year old man presents with gradually worsening rigidity of his arms and leg,7.094,0.501,8.259,6.586,0.455,7.609,1.0,True
+medqa_test_0645,A 45-year-old woman comes to the physician with a lump on her throat that has st,6.599,0.465,7.819,6.343,1.263,8.358,1.0,True
+medqa_test_0967,A 16-year-old girl comes to the emergency department because of left wrist pain ,9.047,0.494,10.515,7.951,0.528,9.263,1.0,True
+medqa_test_0280,A 32-year-old man arrives to his primary care physician to discuss his fear of f,8.031,0.587,9.454,13.45,0.472,14.838,0.8,True
+pubmedqa_22849512,Are neighbourhood social capital and availability of sports facilities related t,4.398,0.535,5.265,5.258,0.427,6.069,1.0,True
+pubmedqa_11943048,Does receipt of hospice care in nursing homes improve the management of pain at ,5.989,0.713,7.027,9.758,0.467,10.594,0.8,True
+pubmedqa_27757987,Does the treatment of amblyopia normalise subfoveal choroidal thickness in ambly,5.82,0.42,6.572,9.169,0.608,10.165,1.0,True
+pubmedqa_22813804,Does obesity impact the pattern and outcome of trauma in children?,6.366,0.441,7.176,6.419,0.396,7.099,1.0,True
+pubmedqa_16392897,BCRABL transcript detection by quantitative real-time PCR : are correlated resul,5.711,0.468,6.476,4.985,0.637,5.93,1.0,True
+pubmedqa_25810292,Is minimally invasive mitral valve repair with artificial chords reproducible an,7.239,0.828,8.496,8.096,0.655,9.701,1.0,True
+pubmedqa_28196511,Antiretroviral therapy related adverse effects: Can sub-Saharan Africa cope with,5.797,0.486,6.694,6.278,0.419,7.063,0.8,True
+pubmedqa_16968876,Is a patient's self-reported health-related quality of life a prognostic factor ,2.413,0.375,3.101,2.17,0.446,2.935,1.0,True
+pubmedqa_27405146,PREVALENCE OF THE STREPTOCOCUS AGALACTIAE IN THE PREGNANT WOMAN FROM THE AUTONOM,5.502,0.503,6.351,4.902,0.483,5.833,1.0,True
+pubmedqa_19401574,Gadofosveset-enhanced MR angiography of carotid arteries: does steady-state imag,4.92,0.504,5.755,4.778,0.507,5.593,1.0,True
+pubmedqa_18041059,Do adjuvant aromatase inhibitors increase the cardiovascular risk in postmenopau,4.694,0.521,5.53,5.275,0.518,6.187,1.0,True
+pubmedqa_22205377,Some aspects of social exclusion: do they influence suicide mortality?,3.632,0.471,4.442,2.807,0.531,3.611,1.0,True
+pubmedqa_11970923,Convulsions and retinal haemorrhage: should we look further?,3.056,0.495,3.841,2.647,0.517,3.502,1.0,True
+pubmedqa_17259061,Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce,4.838,0.524,5.669,5.604,0.53,6.553,1.0,True
+pubmedqa_20073599,Do liquid-based preparations of urinary cytology perform differently than classi,4.589,0.62,5.754,2.636,0.483,3.453,1.0,True
+pubmedqa_26708803,Treatment of contralateral hydrocele in neonatal testicular torsion: Is less mor,2.51,0.615,3.426,2.348,0.5,3.199,1.0,True
+pubmedqa_20337874,Delayed diagnosis of anorectal malformations: are current guidelines sufficient?,5.147,0.512,5.935,4.566,0.541,5.41,1.0,True
+pubmedqa_25499207,Is neck pain associated with worse health-related quality of life 6 months later,2.694,0.495,3.529,2.007,0.584,2.904,1.0,True
+pubmedqa_15475728,Alcohol consumption and acute myocardial infarction: a benefit of alcohol consum,3.363,0.497,4.211,2.803,0.551,3.662,1.0,True
+pubmedqa_25819796,Literacy after cerebral hemispherectomy: Can the isolated right hemisphere read?,4.554,0.592,5.552,4.273,0.496,5.104,1.0,True
+pubmedqa_27146470,Are tuberculosis patients adherent to prescribed treatments in China?,4.881,0.506,5.664,4.463,0.511,5.298,1.0,True
+pubmedqa_27040842,Does septoplasty change the dimensions of compensatory hypertrophy of the middle,3.236,0.526,4.083,2.962,0.48,3.752,1.0,True
+pubmedqa_18534072,Do general practice characteristics influence uptake of an information technolog,3.094,0.609,4.033,2.746,0.48,3.608,1.0,True
+pubmedqa_19108857,Cerebromediastinal tuberculosis in a child with a probable Say-Barber-Miller syn,5.162,0.492,5.952,4.739,0.502,5.56,1.0,True
+pubmedqa_25752912,Is the probability of prenatal diagnosis or termination of pregnancy different f,5.116,0.53,6.072,4.385,0.491,5.266,1.0,True
+pubmedqa_8199520,Are physicians meeting the needs of family caregivers of the frail elderly?,4.73,0.492,5.494,4.623,0.504,5.415,0.8,True
+pubmedqa_23283159,Is obesity a risk factor for wheezing among adolescents?,3.132,0.657,4.051,2.777,0.485,3.553,1.0,True
+pubmedqa_15381614,Cutaneous melanoma in a multiethnic population: is this a different disease?,4.527,0.517,5.339,5.075,0.532,5.906,1.0,True
+pubmedqa_17914515,"Suturing of the nasal septum after septoplasty, is it an effective alternative t",5.558,0.575,6.502,4.606,0.476,5.392,1.0,True
+pubmedqa_24318956,Is digoxin use for cardiovascular disease associated with risk of prostate cance,4.23,0.497,5.016,3.171,0.531,3.992,1.0,True
+pubmedqa_16418930,Landolt C and snellen e acuity: differences in strabismus amblyopia?,3.591,0.534,4.484,3.049,0.499,3.848,0.8,True
+pubmedqa_22504515,Endovenous laser ablation in the treatment of small saphenous varicose veins: do,7.061,1.42,8.865,7.182,0.477,8.159,1.0,True
+pubmedqa_19482903,Treadmill testing of children who have spina bifida and are ambulatory: does pea,5.053,0.504,5.873,6.054,0.504,6.874,1.0,True
+pubmedqa_18832500,Systematic use of patient-rated depression severity monitoring: is it helpful an,3.827,0.514,4.643,2.61,0.49,3.483,1.0,True
+pubmedqa_26399179,Eyelid-parotid metastasis: do we screen for coexisting masses?,3.577,0.531,4.388,2.596,0.671,3.567,1.0,True
+pubmedqa_8910148,Transesophageal echocardiographic assessment of left ventricular function in bra,5.041,0.554,5.985,8.635,0.82,9.803,1.0,True
+pubmedqa_27050505,Does angiotensin-converting enzyme-1 (ACE-1) gene polymorphism lead to chronic k,4.214,0.648,5.231,2.931,0.493,3.832,1.0,True
+pubmedqa_20813740,Does β-catenin have a role in pathogenesis of sebaceous cell carcinoma of the ey,3.44,0.546,4.29,2.872,0.483,3.664,1.0,True
+pubmedqa_24748473,Are there risk factors that increase the rate of staple line leakage in patients,3.54,0.521,4.368,2.635,0.494,3.516,1.0,True
+pubmedqa_17276801,Can elevated troponin I levels predict complicated clinical course and inhospita,2.898,0.567,3.789,2.272,0.503,3.107,0.8,True
+pubmedqa_12690589,Can continuous physical training counteract aging effect on myoelectric fatigue?,3.448,0.523,4.255,2.613,0.615,3.614,1.0,True
+pubmedqa_14992556,Artefacts in 24-h pharyngeal and oesophageal pH monitoring: is simplification of,3.604,0.508,4.49,2.914,0.514,3.738,0.8,True
+pubmedqa_15208005,The Omega-3 Index: a new risk factor for death from coronary heart disease?,3.184,0.516,4.006,2.676,0.509,3.484,1.0,True
+pubmedqa_24666444,"Is there any evidence of a ""July effect"" in patients undergoing major cancer sur",3.064,0.491,3.882,3.148,0.487,3.919,1.0,True
+pubmedqa_28006766,Is Overexpression of Ki-67 a Prognostic Biomarker of Upper Tract Urinary Carcino,3.208,0.615,4.139,2.74,0.488,3.581,0.8,True
+pubmedqa_17355582,Does ambulatory process of care predict health-related quality of life outcomes ,3.329,0.516,4.154,2.665,0.487,3.485,1.0,True
+pubmedqa_22042121,Perioperative care in an animal model for training in abdominal surgery: is it n,3.492,0.524,4.332,2.688,0.477,3.475,1.0,True
+pubmedqa_18472368,Does treatment duration affect outcome after radiotherapy for prostate cancer?,3.177,0.507,3.96,2.586,0.498,3.384,1.0,True
+pubmedqa_23517744,Is solitary kidney really more resistant to ischemia?,3.185,0.576,4.019,2.42,0.492,3.183,1.0,True
+pubmedqa_10411439,Lloyd-Davies position with Trendelenburg--a disaster waiting to happen?,3.285,0.539,4.099,2.623,0.572,3.509,1.0,True

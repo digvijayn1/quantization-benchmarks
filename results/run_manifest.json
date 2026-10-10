@@ -1,0 +1,44 @@
+{
+  "pipeline": "Medical Corpus Ingestion, Dense Retrieval & Evaluation Pipeline",
+  "timestamp": "2026-10-07 12:49:05",
+  "hardware": {
+    "processor": "AMD Ryzen 7 8845HS (Zen 4, 8C/16T, AVX-512)",
+    "memory": "16 GB RAM",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU (8GB GDDR6)"
+  },
+  "software_versions": {
+    "python": "3.14.5",
+    "openvino": "2026.4.1",
+    "nncf": "3.4.0",
+    "faiss": "1.15.1",
+    "sentence_transformers": "6.1.0",
+    "transformers": "5.5.4"
+  },
+  "embedding_models": {
+    "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "dimension": 384,
+    "fp32_path": "models/embeddings/fp32",
+    "int8_path": "models/embeddings/int8"
+  },
+  "corpus": {
+    "normalized_path": "data/processed/normalized_corpus.json",
+    "chunks_path": "data/processed/chunks.json",
+    "total_chunks": 5987,
+    "chunk_size": 400,
+    "overlap": 50
+  },
+  "indexes": {
+    "fp32_faiss": "indexes/faiss/fp32/index.faiss",
+    "int8_faiss": "indexes/faiss/int8_embedding/index.faiss",
+    "index_type": "IndexFlatIP"
+  },
+  "evaluation_summary": {
+    "evaluated_queries_per_benchmark": 25,
+    "medqa_fp32_retrieval_raw_acc_pct": 0.0,
+    "medqa_int8_retrieval_raw_acc_pct": 0.0,
+    "pubmedqa_fp32_retrieval_raw_acc_pct": 24.0,
+    "pubmedqa_int8_retrieval_raw_acc_pct": 28.0,
+    "retrieval_overlap_at_k": 0.966,
+    "top1_rank_agreement_rate": 96.0
+  }
+}

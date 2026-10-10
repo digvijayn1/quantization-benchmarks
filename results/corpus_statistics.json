@@ -1,0 +1,21 @@
+{
+  "number_of_documents": 1064,
+  "number_of_chunks": 5987,
+  "average_chunk_char_length": 306.15,
+  "median_chunk_char_length": 321,
+  "minimum_chunk_char_length": 48,
+  "maximum_chunk_char_length": 622,
+  "average_word_count": 44.66,
+  "duplicate_chunk_count": 21,
+  "empty_chunk_count": 0,
+  "source_distribution": {
+    "clinical_calibration_guidelines": 64,
+    "pubmed_biomedical_abstracts": 1000
+  },
+  "chunking_parameters": {
+    "chunk_size": 400,
+    "overlap": 50,
+    "min_length": 30,
+    "strategy": "recursive_sentence"
+  }
+}

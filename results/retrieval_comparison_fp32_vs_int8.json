@@ -1,0 +1,10 @@
+{
+  "description": "FP32 vs INT8 Dense Embedding Retrieval Comparison",
+  "metrics": {
+    "mean_overlap_at_k": 0.966,
+    "top1_rank_agreement_rate": 96.0,
+    "embedding_speedup_ratio": 1.0
+  },
+  "fp32_latency_mean_ms": 7.029,
+  "int8_latency_mean_ms": 7.038
+}

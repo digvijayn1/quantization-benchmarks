@@ -1,0 +1,30 @@
+{
+  "random_seed": 42,
+  "subsets": {
+    "medqa": {
+      "source_dataset": "GBaker/MedQA-USMLE-4-options-hf (test split)",
+      "total_source_samples": 1273,
+      "subset_size": 100,
+      "stratification_variable": "gold_answer (A, B, C, D)",
+      "samples_per_stratum": {
+        "A": 25,
+        "B": 25,
+        "C": 25,
+        "D": 25
+      },
+      "filepath": "data/evaluation/medqa_eval_subset.json"
+    },
+    "pubmedqa": {
+      "source_dataset": "qiaojin/PubMedQA (pqa_labeled)",
+      "total_source_samples": 1000,
+      "subset_size": 100,
+      "stratification_variable": "final_decision (yes, no, maybe)",
+      "samples_per_stratum": {
+        "yes": 55,
+        "no": 33,
+        "maybe": 12
+      },
+      "filepath": "data/evaluation/pubmedqa_eval_subset.json"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Retrieval Configuration for Medical Question-Answering
+# Project: Architecture-Aware Optimization of an Offline Medical Question-Answering System
+
+corpus:
+  raw_corpus_path: "data/corpus/raw_medical_corpus.json"
+  normalized_corpus_path: "data/processed/normalized_corpus.json"
+  chunks_path: "data/processed/chunks.json"
+
+chunking:
+  chunk_size: 400
+  overlap: 50
+  strategy: "recursive_sentence" # sentence boundary aware
+  min_chunk_length: 30
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+  max_sequence_length: 256
+  batch_size: 32
+  normalize: true
+  fp32_model_dir: "models/embeddings/fp32"
+  int8_model_dir: "models/embeddings/int8"
+  fp32_embeddings_path: "data/processed/embeddings_fp32.npy"
+  int8_embeddings_path: "data/processed/embeddings_int8.npy"
+
+index:
+  index_type: "IndexFlatIP" # Inner Product with L2 normalized embeddings = Cosine Similarity
+  fp32_index_dir: "indexes/faiss/fp32"
+  int8_index_dir: "indexes/faiss/int8_embedding"
+
+retrieval:
+  top_k: 5
+  supported_top_k: [1, 3, 5, 10]
+  similarity_metric: "cosine"
+
+prompt:
+  template_path: "prompts/medical_qa_prompt.txt"
+  max_context_tokens: 1536
+  chunk_separator: "\n\n---\n\n"
+  include_metadata: true
+
+evaluation:
+  seed: 42
+  medqa_subset_size: 100
+  pubmedqa_subset_size: 100
+  medqa_subset_path: "data/evaluation/medqa_eval_subset.json"
+  pubmedqa_subset_path: "data/evaluation/pubmedqa_eval_subset.json"
+  results_dir: "results/evaluation"

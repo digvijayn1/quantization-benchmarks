@@ -1,0 +1,9 @@
+{
+  "experiment_id": "pubmedqa_awq_int4_embed_int8_k5",
+  "timestamp": "2026-10-07 12:49:04",
+  "qa_model": "models/openvino/awq/int4_sym_g128_awq",
+  "embedding_precision": "int8",
+  "top_k": 5,
+  "device": "CPU",
+  "limit": 25
+}

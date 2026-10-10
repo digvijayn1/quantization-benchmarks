@@ -1,0 +1,33 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "max_sequence_length": 256,
+  "fp32_model": {
+    "xml_size_mb": 0.21,
+    "bin_size_mb": 86.08,
+    "total_size_mb": 86.29,
+    "export_time_seconds": 14.46
+  },
+  "int8_model": {
+    "xml_size_mb": 0.33,
+    "bin_size_mb": 21.76,
+    "total_size_mb": 22.09,
+    "compress_time_seconds": 1.2,
+    "compression_ratio": "3.91x",
+    "size_reduction_percent": "74.4%"
+  },
+  "calibration": {
+    "dataset": "data\\processed\\chunks.json",
+    "calibration_samples": 64,
+    "method": "nncf.compress_weights(mode=INT8_ASYM)"
+  },
+  "equivalence_metrics": {
+    "validation_samples": 50,
+    "mean_cosine_similarity": 1.0,
+    "min_cosine_similarity": 1.0,
+    "max_cosine_similarity": 1.0,
+    "std_cosine_similarity": 0.0,
+    "mean_l2_distance": 0.0,
+    "validation_status": "PASSED_HIGH_FIDELITY"
+  }
+}
